@@ -1,0 +1,98 @@
+/* =============
+    Footer
+============= */
+
+footer {
+    background-color: $blue;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-areas: ". footer .";
+
+    #footer-content {
+        grid-area: footer;
+        color: $brown;
+        padding: 50px 0;
+
+        #social {
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    margin: 0 10px;
+
+                    a:link,
+                    a:visited {
+                        color: $brown;
+                        text-decoration: none;
+                        transition: 0.25s;
+                    }
+
+                    a:hover,
+                    a:active {
+                        color: $white;
+                    }
+                }
+            }
+
+            #links {
+                padding-top: 40px;
+
+                ul {
+                    display: grid;
+                    gap: 30px;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-areas:
+                        " h1 h2 h3 "
+                        " h4 h5 h6 ";
+
+                    li {
+                        text-align: center;
+                        font-size: rem-calc(16);
+
+                        @include lg {
+                            font-size: rem-calc(20);
+                        }
+
+                        a:link,
+                        a:visited {
+                            color: $brown;
+                            text-decoration: none;
+                            transition: 0.25s;
+                        }
+
+                        a:hover,
+                        a:active {
+                            color: $white;
+                        }
+
+                        #h1 {
+                            grid-area: h1;
+                        }
+
+                        #h2 {
+                            grid-area: h2;
+                        }
+
+                        #h3 {
+                            grid-area: h3;
+                        }
+
+                        #h4 {
+                            grid-area: h4;
+                        }
+
+                        #h5 {
+                            grid-area: h5;
+                        }
+
+                        #h6 {
+                            grid-area: h6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

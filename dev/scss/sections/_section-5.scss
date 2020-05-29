@@ -1,0 +1,138 @@
+/* =============
+    Section-5
+============= */
+
+#section-5 {
+    background-color: $lightgrey;
+    padding: 40px 0;
+    display: grid;
+    grid-template-areas: ". section-5 .";
+    grid-template-columns: 15px auto 15px;
+
+    @include md {
+        padding: 60px 0 60px;
+        grid-template-columns: 15% auto 15%;
+    }
+
+    @include lg {
+        padding: 80px 0 80px;
+        grid-template-columns: 10% auto 10%;
+    }
+    
+    @include xl{
+        grid-template-columns: "auto 1200px auto";
+    }
+
+    #section-5-content {
+        grid-area: section-5;
+        color: $blue;
+
+
+        #section-5-top {
+
+            display: grid;
+            gap: 20px;
+            grid-template-rows: (3, 1fr);
+            grid-template-columns: 60% 40%;
+            grid-template-areas:
+                "h1 h1"
+                "h2 h2"
+                "p h3";
+
+            @include md {
+                gap: 35px;
+            }
+        }
+
+        #section-5-bottom {
+
+            @include md {
+                padding-top: 20px;
+                display: grid;
+                gap: 25px;
+                grid-template-rows: (2, 1fr);
+                grid-template-columns: 30% 70%;
+                grid-template-areas:
+                    "h4 h4"
+                    ". p";
+            }
+
+        }
+
+        h1 {
+            grid-area: h1;
+            font-size: 20px;
+            text-align: left;
+
+            @include md {
+                font-size: 45px;
+            }
+
+            @include lg {
+                font-size: 50px;
+            }
+
+        }
+
+        h2 {
+            grid-area: h2;
+            font-size: 18px;
+            margin-left: 80px;
+
+            @include md {
+                font-size: 30px;
+                margin-left: 180px;
+            }
+
+            @include md {
+                font-size: 40px;
+            }
+
+        }
+
+        h3 {
+            grid-area: h3;
+            font-size: 18px;
+            
+            @include md {
+                transform: rotate(90deg);
+                font-size: 22px;
+                margin: 10px 100px 10px 0;
+            }
+
+            @include lg {
+                font-size: 25px;
+                margin: 10px 200px 5px 0;
+            }
+
+        }
+
+        P {
+            grid-area: p;
+            font-size: 18px;
+            text-align: justify;
+
+            @include lg{
+                font-size: 20px; 
+            }
+        }
+
+        h4 {
+          
+            grid-area: h4;
+            font-size: 18px;
+            text-align: right;
+
+            @include md {
+                font-size: 45px;
+                margin-left: 40%;
+            }
+
+            @include lg {
+                font-size: 50px;
+            }
+        }
+
+
+    }
+}

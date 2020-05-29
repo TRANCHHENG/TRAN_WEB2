@@ -1,0 +1,25 @@
+/* =============
+    Typography
+============= */
+h1,h2,h3,h4,h5{
+    margin: 0;
+    padding: 0;
+}
+
+.show-for-md{
+    display: none;
+    @include md{
+        display: block;
+    }
+}
+
+.show-for-lg{
+    display: none;
+    @include lg{
+        display: block;
+    }
+}
+
+.content-spacing{
+    margin-top: 40px;
+}

@@ -1,0 +1,109 @@
+/* =============
+    Section-4
+============= */
+
+#section-4 {
+
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-4 .";
+    background-color: $lightblue;
+    padding: 40px 0;
+
+    @include md {
+        padding: 60px 0;
+    }
+
+    @include lg {
+        grid-template-areas: "section-4";
+        padding: 80px 0;
+    }
+
+    @include xl {
+        grid-template-columns: auto 1200px auto;
+    }
+
+        >div {
+            grid-area: section-4;
+
+            ul {
+                background-size: cover;
+                background-position: center;
+                display: grid;
+                gap: 30px;
+                grid-template-areas:
+                    " g2 "
+                    " g1 ";
+
+                @include md {
+                    gap: 40px;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-areas:
+                        " . g2 g1 . "
+                        "g3 g3 g3 g3";
+                }
+
+                @include lg {
+                    gap: 15px;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-areas:
+                        " g2 g3 g1 "
+                        " g2 g3 g1 ";
+                }
+
+                
+                #g1 {
+                    grid-area: g1;
+                    background-image: url("../img/section-4/1.jpg");
+                    height: 231px;
+                    width: 100%;
+
+                    @include md {
+                        width: 310px;
+                        height: 217px;
+                    }
+
+                    @include lg {
+                        width: 450px;
+                        height: 407px;
+
+                    }
+                }
+
+                #g2 {
+
+                    grid-area: g2;
+                    background-image: url("../img/section-4/2.jpg");
+                    height: 231px;
+                    width: 100%;
+
+                    @include md {
+                        width: 310px;
+                        height: 217px;
+                    }
+
+                    @include lg {
+                        width: 450px;
+                        height: 407px;
+                    }
+                }
+
+                #g3 {
+                    background-image: url("../img/section-4/3.jpg");
+                    width: 566px;
+                    height: 256px;
+                    
+                    @include lg {
+                        width: 489px;
+                        height: 320px;
+                        margin-top: 170px;
+                    }
+
+                    @include md {
+                        grid-area: g3;
+                    }
+                }
+        }
+    }
+}

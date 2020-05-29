@@ -1,0 +1,262 @@
+/* =============
+    Section-6
+============= */
+
+#section-6 {
+
+    background-color: $grey;
+    text-align: center;
+    color: $white;
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-6 .";
+
+    @include md {
+        background-color: $lightgrey;
+    }
+
+    @include lg {
+        grid-template-columns: 18% auto 18%;
+    }
+
+
+    @include xl {
+        grid-template-columns: auto 1200px auto;
+    }
+
+    >div {
+        grid-area: section-6;
+        padding: 40px 0;
+
+        @include md {
+            background-color: $grey;
+            padding: 60px 0;
+            width: 80%;
+            margin: 0 10%;
+        }
+
+        #section-6-title {
+            margin-bottom: 40px;
+
+            h1 {
+                font-size: rem-calc(20);
+
+                @include md {
+                    font-size: rem-calc(30);
+                }
+
+                @include lg {
+                    font-size: rem-calc(50);
+                }
+            }
+        }
+
+        #section-6-card {
+
+            ul {
+                display: grid;
+                gap: 40px;
+                grid-template-rows: repeat (3, 1fr);
+                grid-template-areas:
+                    "card1"
+                    "card2"
+                    "card3";
+
+                li {
+
+                    @include md {
+                        display: grid;
+                        grid-template-columns: 30% auto;
+                        grid-template-areas:
+                            "div section"
+                            "section div"
+                            "div section";
+                    }
+
+                    @include lg {
+                        display: grid;
+                        gap: 80px;
+                        grid-template-columns: 50% auto;
+                        grid-template-areas:
+                            "div section"
+                            "section div"
+                            "div section";
+                    }
+
+                    div {
+                        background-size: cover;
+                        background-position: center;
+                        margin-bottom: 40px;
+                    }
+
+                    h2 {
+                        font-size: rem-calc(18);
+
+                        @include md {
+                            font-size: rem-calc(25);
+                        }
+
+                        @include lg {
+                            font-size: rem-calc(30);
+                        }
+                    }
+
+                    p {
+                        font-size: rem-calc(16);
+                        text-align: justify;
+
+                        @include md {
+                            margin: 40px;
+                        }
+
+
+                        @include lg {
+                            margin: 40px;
+                        }
+                    }
+                }
+
+                #card1 {
+                    grid-area: card1;
+
+                    >div {
+                        background-image: url("../img/section-6/1.jpg");
+                        height: 146px;
+
+                        @include md {
+                            width: 294px;
+                            margin-left: -92px;
+                        }
+
+                        @include lg {
+                            width: 708px;
+                            height: 268px;
+                            margin-left: -160px;
+                        }
+                    }
+                }
+
+                #card2 {
+                    grid-area: card2;
+                    
+                    @include md {
+                        display: grid;
+                        grid-template-columns: 70% auto;
+                        grid-template-areas: "section div";
+                    }
+
+                    @include lg {
+                        display: grid;
+                        grid-template-columns: 45% auto;
+                        grid-template-areas: "section div";
+                    }
+
+                    section {
+                        grid-area: section;
+                    }
+
+
+                    div {
+                        grid-area: div;
+                        background-image: url("../img/section-6/2.jpg");
+                        height: 146px;
+
+                        @include md {
+                            width: 294px;
+                        }
+
+                        @include lg {
+                            width: 709px;
+                            height: 323px;
+                            margin-left: -60px;
+
+                        }
+                    }
+                }
+
+                #card3 {
+                    grid-area: card3;
+
+                    div {
+                        background-image: url("../img/section-6/3.jpg");
+                        height: 146px;
+
+                        @include md {
+                            width: 294px;
+                            margin-left: -92px;
+                        }
+
+                        @include lg {
+                            width: 708px;
+                            height: 323px;
+                            margin-left: -160px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #section-6-bottom {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+
+            @include md {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                    ". h3 ."
+                    "h4 h4 h4";
+                gap: 60px;
+            }
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: rem-calc(16);
+                background-color: $black;
+                height: 32px;
+                width: 140px;
+
+                @include md {
+                    grid-area: h3;
+                    font-size: rem-calc(20);
+                    height: 71px;
+                    width: 250px;
+                }
+
+                @include lg {
+                    width: 450px;
+                    font-size: rem-calc(30);
+                }
+                a:link, a:visited{
+                    color: $white;
+                    transition: 0.25s;
+                    text-decoration: none;
+                }
+    
+                a:hover, a:active{
+                    color: $brown;
+                }
+            }
+
+            h4 {
+                a:link, a:visited{
+                    color: $white;
+                    transition: 0.25s;
+                    text-decoration: none;
+                }
+    
+                a:hover, a:active{
+                    color: $blue;
+                }
+                @include md {
+
+                    font-size: rem-calc(16);
+                    grid-area: h4;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+/* =============
+    Section-9
+============= */
+
+#section-9 {
+
+    background-color: $lightblue;
+    color: $white;
+    padding: 40px 0;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 5px auto 5px;
+    grid-template-areas: " . section-9 .";
+
+    @include md {
+        padding: 60px 0;
+        gap: 60px;
+        grid-template-columns: 10px auto 10px;
+    }
+
+    @include lg {
+        padding-top: 80px;
+        gap: 80px;
+        grid-template-columns: 8% auto 8%;
+    }
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+    #section-9-content {
+        grid-area: section-9;
+
+        #visit {
+
+            @include md {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas:
+                    " h2 h1 "
+                    " p  p";
+            }
+
+            @include lg {
+                grid-template-columns: 60% auto;
+                grid-template-areas:
+                    " h2 h1 "
+                    " p  h1";
+            }
+
+            h1 {
+                grid-area: h1;
+                font-size: rem-calc(16);
+                text-align: center;
+                margin-top: 30px;
+               
+               
+
+                @include md {
+                    font-size: rem-calc(20);
+
+                }
+
+                @include lg {
+                    font-size: rem-calc(30);
+                    transform: rotate(90deg);
+                     margin-right: 200px;
+
+                }
+            }
+
+            p {
+                grid-area: p;
+                text-align: justify;
+                font-size: rem-calc(16);
+
+                @include md {
+                    font-size: rem-calc(20);
+
+                }
+
+                @include lg {
+                    font-size: rem-calc(25);
+
+                }
+            }
+
+            >div {
+                display: grid;
+                grid-template-columns: 15% auto 15%;
+                grid-template-areas: ". h2 .";
+
+                h2 {
+                    margin-top: 20px;
+                    grid-area: h2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: rem-calc(16);
+                    background-color: $black;
+                    color: $white;
+                    height: 32px;
+                    width: 182px;
+
+                    @include md {
+                        font-size: rem-calc(20);
+                        height: 71px;
+                        width: 268px;
+                    }
+
+                    @include lg {
+                        font-size: rem-calc(30);
+                        height: 71px;
+                        width: 393px;
+                    }
+                    a:link, a:visited{
+                        color: $white;
+                        transition: 0.25s;
+                        text-decoration: none;
+                    }
+        
+                    a:hover, a:active{
+                        color: $brown;
+                    }
+                }
+            }
+
+        }
+
+        #gallery-1 {
+
+            ul {
+                background-image: cover;
+                background-position: center;
+
+                @include md {
+                    display: grid;
+                    gap: 10px;
+                    grid-template-columns: 60% auto;
+                    grid-template-areas: "g2 g3";
+
+                }
+
+                @include lg {
+                    display: grid;
+                    gap: 10px;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-areas: "g1 g2 g3 .";
+
+                }
+
+                #g-1 {
+
+                    grid-area: g-1;
+                    background-image: url("../img/section-9/left.jpg");
+                    height: 218px;
+                    width: 238px;
+                }
+
+                #g-2 {
+
+                    grid-area: g-2;
+                    background-image: url("../img/section-9/middle.jpg");
+                    width: 400px;
+                    height: 218px;
+
+                    @include lg {
+                        width: 238px;
+                    }
+                }
+
+                #g-3 {
+                    grid-area: g-3;
+                    background-image: url("../img/section-9/right.jpg");
+                    height: 218px;
+                    width: 238px;
+
+                    @include md {
+                        width: 268px;
+                    }
+
+                    @include lg {
+                        width: 238px;
+                    }
+
+                }
+            }
+        }
+    }
+}

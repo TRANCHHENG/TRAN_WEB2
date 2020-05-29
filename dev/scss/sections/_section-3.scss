@@ -1,0 +1,145 @@
+/* =============
+    Section-3
+============= */
+
+#section-3 {
+
+    background-color: $lightblue;
+    color: $white;
+    padding-top: 40px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". section-3 .";
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+
+    >div {
+        grid-area: section-3;
+        display: grid;
+
+        @include md {
+            grid-template-columns: 60% auto;
+            grid-template-areas:
+                "h2 h1"
+                "p h1"
+                "h3 h3";
+        }
+
+        @include lg {
+            grid-template-columns: 75% auto;
+            grid-template-areas:
+                "h2 h1"
+                "p h3";
+        }
+
+     
+        #title {
+
+            h1 {
+                grid-area: h1;
+                font-size: rem-calc(20);
+                transform: rotate(90deg);
+                margin-top: 45px;
+               
+
+                @include lg {
+                    font-size: rem-calc(20);
+                    margin-top: 55px;
+                }
+
+                span {
+                    color: $blue;
+                }
+            }
+        }
+
+        #info {
+
+            @include md {
+                display: grid;
+                gap: 20px;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas:
+                    "h2"
+                    "p"
+                    "h3";
+            }
+
+            @include lg {
+                grid-template-columns: 60% auto;
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-areas:
+                    "h2 h2"
+                    "p h3";
+            }
+
+            h2 {
+                grid-area: h2;
+                text-align: center;
+                font-size: rem-calc(20);
+
+                @include md {
+                    font-size: rem-calc(40);
+                }
+
+                @include lg {
+                    font-size: rem-calc(50);
+                }
+
+            }
+
+            p {
+                grid-area: p;
+                text-align: center;
+                font-size: rem-calc(16);
+                text-align: center;
+
+                @include md {
+                    font-size: rem-calc(20);
+                }
+
+                @include lg {
+                    font-size: rem-calc(25);
+                }
+            }
+
+            h3 {
+                background-color: $black;
+                width: 170px;
+                height: 32px;
+                color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-area: h3;
+                font-size: rem-calc(16);
+                text-align: center;
+
+                @include md {
+                    font-size: rem-calc(25);
+                    width: 365px;
+                    height: 71px;
+                }
+
+                @include lg {
+                    margin: 25px 0;
+                    font-size: rem-calc(30);
+                    width: 407px;
+                    height: 71px;
+                }
+                a:link, a:visited{
+                    color: $white;
+                    transition: 0.25s;
+                    text-decoration: none;
+                }
+    
+                a:hover, a:active{
+                    color: $brown;
+                }
+            }
+        }
+    }
+}
