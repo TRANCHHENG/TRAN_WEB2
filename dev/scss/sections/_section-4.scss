@@ -7,7 +7,11 @@
     display: grid;
     grid-template-areas: ". section-4 .";
     grid-template-columns: 15px auto 15px;
-    padding: 40px 0;
+    padding-top: 40px;
+
+    @include md {
+        padding-top: 60px;
+    }
 
     @include xl {
         grid-template-columns: auto 1200px auto;
@@ -55,7 +59,7 @@
 
                     @include md {
                         grid-area: g1;
-                        height: 186px;
+                        height: 214px;
                         margin-right: 20%;
                     }
 
@@ -77,8 +81,8 @@
                     width: 100%;
 
                     @include md {
-                        height: 186px;
-                        margin-left: 20%;
+                        height: 214px;
+
                         width: 100%;
                     }
 

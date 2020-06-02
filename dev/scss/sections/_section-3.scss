@@ -3,7 +3,6 @@
 ============= */
 
 #section-3 {
-
     background-color: $lightblue;
     color: $white;
     padding-top: 40px;
@@ -12,7 +11,7 @@
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section-3 .";
 
-    @include xl{
+    @include xl {
         grid-template-columns: auto 1200px auto;
     }
 
@@ -35,16 +34,14 @@
                 "p div";
         }
 
-     
         #title {
 
             h1 {
                 grid-area: h1;
                 font-size: rem-calc(20);
                 transform: rotate(90deg);
-                margin-top: 45px;
-               
-
+                margin-top: 35px;
+                
                 @include lg {
                     font-size: rem-calc(20);
                     margin-top: 55px;
@@ -88,7 +85,6 @@
                 @include lg {
                     font-size: rem-calc(50);
                 }
-
             }
 
             p {
@@ -106,48 +102,51 @@
                 }
             }
 
-           div{ 
-               grid-area: div;
-               display: grid;
-               grid-template-columns: repeat(3,1fr);
-               grid-template-areas: ". h3 .";
-               padding-top: 20px;
-               
-            h3 {
-                grid-area: h3;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                background-color: $black;
-                height: 48px;
-                width: 152px;
-              
-                font-size: rem-calc(16);
-                color: $white;
-                @include md {
-                    font-size: rem-calc(25);
-                    width: 365px;
-                    height: 71px;
-                }
+            div {
+                grid-area: div;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: ". h3 .";
+                padding-top: 20px;
 
-                @include lg {
-                    margin: 25px 0;
-                    font-size: rem-calc(30);
-                    width: 407px;
-                    height: 71px;
-                }
-                a:link, a:visited{
+                h3 {
+                    grid-area: h3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    background-color: $black;
+                    height: 48px;
+                    width: 152px;
+                    font-size: rem-calc(16);
                     color: $white;
-                    transition: 0.25s;
-                    text-decoration: none;
-                }
-    
-                a:hover, a:active{
-                    color: $brown;
+
+                    @include md {
+                        font-size: rem-calc(25);
+                        width: 365px;
+                        height: 71px;
+                    }
+
+                    @include lg {
+                        margin: 25px 0;
+                        font-size: rem-calc(30);
+                        width: 407px;
+                        height: 71px;
+                    }
+
+                    a:link,
+                    a:visited {
+                        color: $white;
+                        transition: 0.25s;
+                        text-decoration: none;
+                    }
+
+                    a:hover,
+                    a:active {
+                        color: $brown;
+                    }
                 }
             }
-           } 
         }
     }
 }

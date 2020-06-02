@@ -8,19 +8,17 @@
     display: grid;
     gap: 40px;
     padding-bottom: 40px;
-    grid-template-columns: 15% auto 15%;
+    grid-template-columns: 15px auto 15px;
     grid-template-areas: ". section-8 .";
 
     @include md {
-        grid-template-columns: 18% auto 18%;
-        gap: 60px;
+        grid-template-columns: 15% auto 15%;
         padding-bottom: 60px;
 
     }
 
     @include lg {
-        grid-template-columns: 25% auto 25%;
-        gap: 80px;
+        grid-template-columns: 20% auto 20%;
         padding-bottom: 80px;
     }
 
@@ -28,52 +26,48 @@
         grid-template-columns: auto 1200px auto;
     }
     
-    >div {
-        grid-area: section-8;
-      
-
-            @include md{
-                gap: 60px;
-            }
-            @include lg{
-                gap: 80px;
-            }
+        >div {
+            grid-area: section-8;
         
-
-        h1 {
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: rem-calc(16);
-            background-color: $black;
-            color: $white;
-            height: 32px;
-            width: 182px;
-
-            @include md {
-                display: none;
-            }
-            a:link, a:visited{
-                color: $white;
-                transition: 0.25s;
-                text-decoration: none;
-            }
-
-            a:hover, a:active{
-                color: $brown;
-            }
-            
-        }
-        #button{
-            @include md{
+            #button1{
                 display: grid;
-                gap: 40px;
                 grid-template-columns: repeat(3, 1fr);
-                grid-template-areas:
-                ". h2 .";
-            }
+                grid-template-areas: ". h1 .";
+
+            h1 {
+                grid-area: h1;
+                margin-bottom: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: rem-calc(16);
+                background-color: $black;
+                color: $white;
+                height: 32px;
+                width: 182px;
+
+                @include md {
+                    display: none;
+                }
+                a:link, a:visited{
+                    color: $white;
+                    transition: 0.25s;
+                    text-decoration: none;
+                }
+
+                a:hover, a:active{
+                    color: $brown;
+                }
             
+            }
+        }
+        
+        #button2{
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            ". h2 .";            
 
             h2 {
                 grid-area: h2;
@@ -110,8 +104,8 @@
             }
         }
         
-
         h3 {
+            grid-area: h3;
             text-align: center;
             font-size: rem-calc(16);
 
@@ -129,27 +123,24 @@
                 text-decoration: none;
             }
         }
-    
-                h4 {
-                    text-align: center;
-                    @include md {
-                        font-size: rem-calc(20);
-                    }
-
-                    @include lg {
-                        font-size: rem-calc(25);
-                    }
-                    a:link, a:visited{
-                        color: $blue;
-                        transition: 0.25s;
-                        text-decoration: none;
-                    }
-
-                    a:hover, a:active{
-                        color: $brown;
-                    }
+            h4 {
+                text-align: center;
+                @include md {
+                    font-size: rem-calc(20);
                 }
-        
-        
+
+                @include lg {
+                    font-size: rem-calc(25);
+                }
+                a:link, a:visited{
+                color: $blue;
+                transition: 0.25s;
+                text-decoration: none;
+                }
+
+                a:hover, a:active{
+                color: $brown;
+                }
+            }
     }
 }

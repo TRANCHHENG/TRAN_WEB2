@@ -729,7 +729,7 @@ footer {
       grid-area: h1;
       font-size: 1.25rem;
       transform: rotate(90deg);
-      margin-top: 45px; }
+      margin-top: 35px; }
       @media (min-width: 992px) {
         #section-3 > div #title h1 {
           font-size: 1.25rem;
@@ -796,11 +796,13 @@ footer {
             font-size: 1.875rem;
             width: 407px;
             height: 71px; } }
-        #section-3 > div #info div h3 a:link, #section-3 > div #info div h3 a:visited {
+        #section-3 > div #info div h3 a:link,
+        #section-3 > div #info div h3 a:visited {
           color: #fff;
           transition: 0.25s;
           text-decoration: none; }
-        #section-3 > div #info div h3 a:hover, #section-3 > div #info div h3 a:active {
+        #section-3 > div #info div h3 a:hover,
+        #section-3 > div #info div h3 a:active {
           color: #C9A899; }
 
 /* =============
@@ -811,7 +813,10 @@ footer {
   display: grid;
   grid-template-areas: ". section-4 .";
   grid-template-columns: 15px auto 15px;
-  padding: 40px 0; }
+  padding-top: 40px; }
+  @media (min-width: 768px) {
+    #section-4 {
+      padding-top: 60px; } }
   @media (min-width: 1200px) {
     #section-4 {
       grid-template-columns: auto 1200px auto; } }
@@ -845,7 +850,7 @@ footer {
       @media (min-width: 768px) {
         #section-4 > div ul #g1 div {
           grid-area: g1;
-          height: 186px;
+          height: 214px;
           margin-right: 20%; } }
       @media (min-width: 992px) {
         #section-4 > div ul #g1 div {
@@ -860,8 +865,7 @@ footer {
       width: 100%; }
       @media (min-width: 768px) {
         #section-4 > div ul #g2 div {
-          height: 186px;
-          margin-left: 20%;
+          height: 214px;
           width: 100%; } }
       @media (min-width: 992px) {
         #section-4 > div ul #g2 div {
@@ -1262,82 +1266,79 @@ footer {
   display: grid;
   gap: 40px;
   padding-bottom: 40px;
-  grid-template-columns: 15% auto 15%;
+  grid-template-columns: 15px auto 15px;
   grid-template-areas: ". section-8 ."; }
   @media (min-width: 768px) {
     #section-8 {
-      grid-template-columns: 18% auto 18%;
-      gap: 60px;
+      grid-template-columns: 15% auto 15%;
       padding-bottom: 60px; } }
   @media (min-width: 992px) {
     #section-8 {
-      grid-template-columns: 25% auto 25%;
-      gap: 80px;
+      grid-template-columns: 20% auto 20%;
       padding-bottom: 80px; } }
   @media (min-width: 1200px) {
     #section-8 {
       grid-template-columns: auto 1200px auto; } }
   #section-8 > div {
     grid-area: section-8; }
-    @media (min-width: 768px) {
-      #section-8 > div {
-        gap: 60px; } }
-    @media (min-width: 992px) {
-      #section-8 > div {
-        gap: 80px; } }
-    #section-8 > div h1 {
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1rem;
-      background-color: #000;
-      color: #fff;
-      height: 32px;
-      width: 182px; }
-      @media (min-width: 768px) {
-        #section-8 > div h1 {
-          display: none; } }
-      #section-8 > div h1 a:link, #section-8 > div h1 a:visited {
+    #section-8 > div #button1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: ". h1 ."; }
+      #section-8 > div #button1 h1 {
+        grid-area: h1;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        background-color: #000;
         color: #fff;
-        transition: 0.25s;
-        text-decoration: none; }
-      #section-8 > div h1 a:hover, #section-8 > div h1 a:active {
-        color: #C9A899; }
-    @media (min-width: 768px) {
-      #section-8 > div #button {
-        display: grid;
-        gap: 40px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: ". h2 ."; } }
-    #section-8 > div #button h2 {
-      grid-area: h2;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1rem;
-      background-color: #000;
-      color: #fff;
-      height: 32px;
-      width: 182px; }
-      @media (min-width: 768px) {
-        #section-8 > div #button h2 {
-          font-size: 1.25rem;
-          height: 71px;
-          width: 360px; } }
-      @media (min-width: 992px) {
-        #section-8 > div #button h2 {
-          font-size: 1.875rem;
-          height: 71px;
-          width: 450px; } }
-      #section-8 > div #button h2 a:link, #section-8 > div #button h2 a:visited {
+        height: 32px;
+        width: 182px; }
+        @media (min-width: 768px) {
+          #section-8 > div #button1 h1 {
+            display: none; } }
+        #section-8 > div #button1 h1 a:link, #section-8 > div #button1 h1 a:visited {
+          color: #fff;
+          transition: 0.25s;
+          text-decoration: none; }
+        #section-8 > div #button1 h1 a:hover, #section-8 > div #button1 h1 a:active {
+          color: #C9A899; }
+    #section-8 > div #button2 {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: ". h2 ."; }
+      #section-8 > div #button2 h2 {
+        grid-area: h2;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        background-color: #000;
         color: #fff;
-        transition: 0.25s;
-        text-decoration: none; }
-      #section-8 > div #button h2 a:hover, #section-8 > div #button h2 a:active {
-        color: #C9A899; }
+        height: 32px;
+        width: 182px; }
+        @media (min-width: 768px) {
+          #section-8 > div #button2 h2 {
+            font-size: 1.25rem;
+            height: 71px;
+            width: 360px; } }
+        @media (min-width: 992px) {
+          #section-8 > div #button2 h2 {
+            font-size: 1.875rem;
+            height: 71px;
+            width: 450px; } }
+        #section-8 > div #button2 h2 a:link, #section-8 > div #button2 h2 a:visited {
+          color: #fff;
+          transition: 0.25s;
+          text-decoration: none; }
+        #section-8 > div #button2 h2 a:hover, #section-8 > div #button2 h2 a:active {
+          color: #C9A899; }
     #section-8 > div h3 {
+      grid-area: h3;
       text-align: center;
       font-size: 1rem; }
       @media (min-width: 768px) {
