@@ -25,14 +25,14 @@
             grid-template-areas:
                 "h2 h1"
                 "p h1"
-                "h3 h3";
+                "div div";
         }
 
         @include lg {
             grid-template-columns: 75% auto;
             grid-template-areas:
                 "h2 h1"
-                "p h3";
+                "p div";
         }
 
      
@@ -65,7 +65,7 @@
                 grid-template-areas:
                     "h2"
                     "p"
-                    "h3";
+                    "div";
             }
 
             @include lg {
@@ -73,7 +73,7 @@
                 grid-template-rows: repeat(2, 1fr);
                 grid-template-areas:
                     "h2 h2"
-                    "p h3";
+                    "p div";
             }
 
             h2 {
@@ -106,18 +106,25 @@
                 }
             }
 
+           div{ 
+               grid-area: div;
+               display: grid;
+               grid-template-columns: repeat(3,1fr);
+               grid-template-areas: ". h3 .";
+               padding-top: 20px;
+               
             h3 {
-                background-color: $black;
-                width: 170px;
-                height: 32px;
-                color: $white;
+                grid-area: h3;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                grid-area: h3;
-                font-size: rem-calc(16);
                 text-align: center;
-
+                background-color: $black;
+                height: 48px;
+                width: 152px;
+              
+                font-size: rem-calc(16);
+                color: $white;
                 @include md {
                     font-size: rem-calc(25);
                     width: 365px;
@@ -140,6 +147,7 @@
                     color: $brown;
                 }
             }
+           } 
         }
     }
 }

@@ -8,18 +8,16 @@
     color: $white;
     padding-bottom: 40px;
     display: grid;
-    grid-template-columns: 5px auto 5px;
-    grid-template-areas: " . section-9 .";
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: " . section-10 .";
 
     @include md {
         padding-bottom: 60px;
         gap: 60px;
-
     }
 
     @include lg {
         padding-bottom: 80px;
-
         grid-template-columns: 10% auto 10%;
     }
     
@@ -28,42 +26,45 @@
     }
 
     #section-10-content {
-        grid-area: section-9;
+        grid-area: section-10;
 
         #photography {
-            
+  
             @include md {
                 display: grid;
                 padding: 20px;
-                grid-template-rows: 20% auto;
-                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                grid-template-columns: auto 45% 45% auto;
                 grid-template-areas:
-                " h1 ."   
-                " p p";
+                " . h1 h1 ."   
+                " . p p .";
                     
             }
 
             @include lg {
-                grid-template-columns: auto 60%;
+                grid-template-columns: auto 30% 60% auto;
                 grid-template-areas:
-                    " . p "
-                    " h1 .";
+                    " . . p ."
+                    " . h1 . .";
             }
 
             h1 {
                 grid-area: h1;
                 font-size: rem-calc(16);
                 text-align: center;
+                
 
                 @include md {
-                    font-size: rem-calc(20);
+                    font-size: rem-calc(30);
+                    text-align: left;
 
                 }
 
                 @include lg {
-                    font-size: rem-calc(30);
+                    font-size: rem-calc(40);
                     transform: rotate(-90deg);
-                    margin-left: 300px;
+                    margin-left: 150px;
+                   
 
                 }
             }
@@ -85,50 +86,63 @@
             }
         }
 
-        #gallery-2 {
+        #section-10-gallery{
 
             ul {
-                background-image: cover;
-                background-position: center;
-
                 @include md {
                     display: grid;
                     gap: 15px;
-                    grid-template-columns: auto 70%;
-                    grid-template-areas: "g1 g2";
+                    grid-template-columns:auto 60%;
+                    grid-template-areas: "g7 g8";
 
                 }
 
                 @include lg {
                     display: grid;
-                    gap: 20px;
                     grid-template-columns: repeat(4, 1fr);
-                    grid-template-areas: ". . g1 g2 ";
+                    grid-template-areas: ". g7 g8 g8 ";
+                    margin-left: 150px;
 
                 }
 
-                #g4 {
-                    grid-area: g4;
-                    background-image: url("../img/section-10/left.jpg");
-                    height: 218px;
-                    width: 238px;
+                li{
+                    background-position: center;
+                    background-size: cover;
+              
+                }
+
+                #g7 {
+                    div{
+                        background-image: url("../img/section-10/left.jpg");
+                        height: 205px;
+                    }
+
+                    @include md{
+                        grid-area: g7;  
+                    }
 
                     @include lg {
-                        width: 268px;
+                        width: 238px;
                     }
                 }
 
-                #g5 {
-                    grid-area: g5;
-                    background-image: url("../img/section-10/right.jpg");
-                    width: 460px;
-                    height: 218px;
+                #g8 {
+                    div{
+                        background-image: url("../img/section-10/right.jpg");
+                        height: 205px;
+                        
+                    }
+
+                    @include md{
+                        grid-area: g8;  
+                    }
 
                     @include lg {
-                        width: 490px;
+                        width: 400px;
+                        
                     }
                 }
             }
-        }
-    }
+         }
+    }   
 }
