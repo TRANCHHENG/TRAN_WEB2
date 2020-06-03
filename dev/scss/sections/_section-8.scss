@@ -22,17 +22,17 @@
         padding-bottom: 80px;
     }
 
-    @include xl{
+    @include xl {
         grid-template-columns: auto 1200px auto;
     }
-    
-        >div {
-            grid-area: section-8;
-        
-            #button1{
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-areas: ". h1 .";
+
+    >div {
+        grid-area: section-8;
+
+        #button1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: ". h1 .";
 
             h1 {
                 grid-area: h1;
@@ -49,25 +49,28 @@
                 @include md {
                     display: none;
                 }
-                a:link, a:visited{
+
+                a:link,
+                a:visited {
                     color: $white;
                     transition: 0.25s;
                     text-decoration: none;
                 }
 
-                a:hover, a:active{
+                a:hover,
+                a:active {
                     color: $brown;
                 }
-            
+
             }
         }
-        
-        #button2{
+
+        #button2 {
             display: grid;
             gap: 40px;
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas:
-            ". h2 .";            
+                ". h2 .";
 
             h2 {
                 grid-area: h2;
@@ -80,30 +83,33 @@
                 color: $white;
                 height: 32px;
                 width: 182px;
-    
+
                 @include md {
                     font-size: rem-calc(20);
                     height: 71px;
                     width: 360px;
                 }
-    
+
                 @include lg {
                     font-size: rem-calc(30);
                     height: 71px;
                     width: 450px;
                 }
-                a:link, a:visited{
+
+                a:link,
+                a:visited {
                     color: $white;
                     transition: 0.25s;
                     text-decoration: none;
                 }
-    
-                a:hover, a:active{
+
+                a:hover,
+                a:active {
                     color: $brown;
                 }
             }
         }
-        
+
         h3 {
             grid-area: h3;
             text-align: center;
@@ -112,35 +118,43 @@
             @include md {
                 display: none;
             }
-            a:link, a:visited{
+
+            a:link,
+            a:visited {
                 color: $blue;
                 transition: 0.25s;
                 text-decoration: underline;
             }
 
-            a:hover, a:active{
+            a:hover,
+            a:active {
                 color: $brown;
                 text-decoration: none;
             }
         }
-            h4 {
-                text-align: center;
-                @include md {
-                    font-size: rem-calc(20);
-                }
 
-                @include lg {
-                    font-size: rem-calc(25);
-                }
-                a:link, a:visited{
+        h4 {
+            text-align: center;
+
+            @include md {
+                font-size: rem-calc(20);
+            }
+
+            @include lg {
+                font-size: rem-calc(25);
+            }
+
+            a:link,
+            a:visited {
                 color: $blue;
                 transition: 0.25s;
                 text-decoration: none;
-                }
-
-                a:hover, a:active{
-                color: $brown;
-                }
             }
+
+            a:hover,
+            a:active {
+                color: $brown;
+            }
+        }
     }
 }

@@ -9,20 +9,27 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+
+    @include lg{
+        display:grid;
+        grid-template-columns: 5% auto 5%;
+        grid-template-areas: ". header ."
+    }
     
     @include xl{
         grid-template-columns: auto 1200px auto;
     }
 
     >div {
+        grid-area: header;
         display: grid;
-        grid-template-columns: auto 87%;
+        grid-template-columns: auto 77%;
         grid-template-areas:
             "burger logo"
             "nav nav";
 
         @include md {
-            grid-template-columns: auto 85%;
+            grid-template-columns: auto 75%;
             grid-template-areas:
                 "burger logo"
                 "nav nav";
@@ -30,10 +37,11 @@ header {
 
         @include lg {
             grid-template-rows: 30% auto;
+            grid-template-columns: 40% auto;
             grid-template-areas:
                 ". top"
                 "logo nav";
-            grid-template-columns: 40% auto;
+            
         }
         
         #top {

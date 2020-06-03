@@ -22,9 +22,10 @@
         grid-template-columns: 10% auto 10%;
     }
 
-    @include xl{
+    @include xl {
         grid-template-columns: auto 1200px auto;
     }
+
     #section-9-content {
         grid-area: section-9;
 
@@ -35,8 +36,8 @@
                 gap: 20px;
                 grid-template-columns: auto 45% 45% auto;
                 grid-template-areas:
-                " h1 h1 h2 h2 "   
-                " . p p .";
+                    " h1 h1 h2 h2 "
+                    " . p p .";
             }
 
             @include lg {
@@ -51,7 +52,7 @@
                 font-size: rem-calc(16);
                 text-align: center;
                 margin-top: 30px;
-               
+
                 @include md {
                     font-size: rem-calc(30);
                 }
@@ -81,7 +82,7 @@
 
             >div {
                 display: grid;
-                grid-template-columns: repeat(3,1fr);
+                grid-template-columns: repeat(3, 1fr);
                 grid-template-areas: ". h2 .";
                 padding-top: 20px;
 
@@ -95,7 +96,7 @@
                     color: $white;
                     height: 32px;
                     width: 182px;
-                  
+
                     @include md {
                         font-size: rem-calc(20);
                         height: 71px;
@@ -107,13 +108,16 @@
                         height: 71px;
                         width: 393px;
                     }
-                    a:link, a:visited{
+
+                    a:link,
+                    a:visited {
                         color: $white;
                         transition: 0.25s;
                         text-decoration: none;
                     }
-        
-                    a:hover, a:active{
+
+                    a:hover,
+                    a:active {
                         color: $brown;
                     }
                 }
@@ -125,7 +129,7 @@
                 @include md {
                     display: grid;
                     gap: 20px;
-                    grid-template-columns:60% auto;
+                    grid-template-columns: 60% auto;
                     grid-template-areas: "g5 g6";
                 }
 
@@ -135,54 +139,56 @@
                     grid-template-areas: "g4 g5 g6 . .";
                 }
 
-                li{
+                li {
                     background-position: center;
                     background-size: cover;
                 }
-                
+
                 #g4 {
-                    div{
+                    div {
                         background-image: url("../img/section-9/left.jpg");
                         height: 218px;
-                     
+
                     }
 
-                    @include md{
+                    @include md {
                         grid-area: g4;
                     }
-                    @include lg{
-                        width: 238px; 
+
+                    @include lg {
+                        width: 238px;
                     }
                 }
-                
+
                 #g5 {
-                    div{
-                    background-image: url("../img/section-9/middle.jpg");
-                    height: 218px;
-                
+                    div {
+                        background-image: url("../img/section-9/middle.jpg");
+                        height: 218px;
+
                     }
 
-                    @include md{
-                        grid-area: g5;  
+                    @include md {
+                        grid-area: g5;
                     }
 
-                    @include lg{
-                        width: 238px; 
+                    @include lg {
+                        width: 238px;
                     }
 
                 }
 
                 #g6 {
-                    div{
+                    div {
                         background-image: url("../img/section-9/right.jpg");
                         height: 218px;
                     }
-                        
-                    @include md{
-                        grid-area: g6;  
-                    } 
-                    @include lg{
-                        width: 238px; 
+
+                    @include md {
+                        grid-area: g6;
+                    }
+
+                    @include lg {
+                        width: 238px;
                     }
                 }
             }

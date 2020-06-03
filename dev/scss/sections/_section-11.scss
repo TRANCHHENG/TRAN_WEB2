@@ -3,10 +3,9 @@
 ============= */
 #section-11 {
     color: $blue;
-    padding: 40px 0;
+    padding-top: 40px;
     display: grid;
-    gap: 40px;
-    grid-template-columns: 10px auto 10px;
+    grid-template-columns: 15px auto 15px;
     grid-template-areas: ". section-11 .";
 
     @include md {
@@ -15,7 +14,7 @@
 
     @include lg {
         grid-template-columns: 15% auto 15%;
-        padding: 80px 0;
+        padding-bottom: 80px;
     }
 
     @include xl {
@@ -25,29 +24,36 @@
     #section-11-content {
         grid-area: section-11;
         display: grid;
-        gap: 20px;
 
         @include md {
-
-            grid-template-rows: 40% auto;
+            gap: 20px;
+            grid-template-rows: 30% auto;
             grid-template-columns: 80% auto;
             grid-template-areas:
-                "article title-1"
-                "video title-1";
+                "article title1 "
+                "video title1";
+
+            h1 {
+                font-size: rem-calc(30);
+                margin-top: 50px;
+
+                @include lg {
+                    font-size: rem-calc(50);
+                }
+            }
         }
 
         @include lg {
 
-            grid-template-rows: 50% auto;
+            grid-template-rows: 30% auto;
             grid-template-columns: 50% auto;
             grid-template-areas:
-                " title title "
+                " title1 title1 "
                 "article video";
         }
 
-        #title-1 {
-
-            grid-area: title;
+        #title1 {
+            grid-area: title1;
 
             @include md {
                 transform: rotate(90deg);
@@ -64,11 +70,11 @@
             }
 
             #article {
+
                 grid-area: article;
 
                 h2 {
                     grid-area: h2;
-                    text-align: right;
                     font-size: rem-calc(20);
 
                     @include lg {
@@ -91,28 +97,20 @@
 
             #video {
                 grid-area: video;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
 
-                h3{
-                    background-color: $black;
-                    color: $white;
-                    font-size: rem-calc(16);
-                    
-                    a:link, a:visited{
-                        color: $white;
-                        transition: 0.25s;
-                        text-decoration: none;
-                    }
-        
-                    a:hover, a:active{
-                        color: $brown;
-                    }
+                div {
+                    width: 100%;
 
-                    @include md{
-                        display: none;
+                    video {
+                        width: 100%;
+
                     }
                 }
             }
-
         }
     }
 }

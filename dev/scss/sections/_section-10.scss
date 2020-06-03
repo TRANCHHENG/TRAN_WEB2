@@ -20,8 +20,8 @@
         padding-bottom: 80px;
         grid-template-columns: 10% auto 10%;
     }
-    
-    @include xl{
+
+    @include xl {
         grid-template-columns: auto 1200px auto;
     }
 
@@ -29,16 +29,16 @@
         grid-area: section-10;
 
         #photography {
-  
+
             @include md {
                 display: grid;
                 padding: 20px;
                 gap: 20px;
                 grid-template-columns: auto 45% 45% auto;
                 grid-template-areas:
-                " . h1 h1 ."   
-                " . p p .";
-                    
+                    " . h1 h1 ."
+                    " . p p .";
+
             }
 
             @include lg {
@@ -52,7 +52,7 @@
                 grid-area: h1;
                 font-size: rem-calc(16);
                 text-align: center;
-                
+
 
                 @include md {
                     font-size: rem-calc(30);
@@ -64,7 +64,7 @@
                     font-size: rem-calc(40);
                     transform: rotate(-90deg);
                     margin-left: 150px;
-                   
+
 
                 }
             }
@@ -86,13 +86,13 @@
             }
         }
 
-        #section-10-gallery{
+        #section-10-gallery {
 
             ul {
                 @include md {
                     display: grid;
                     gap: 15px;
-                    grid-template-columns:auto 60%;
+                    grid-template-columns: auto 60%;
                     grid-template-areas: "g7 g8";
 
                 }
@@ -105,20 +105,20 @@
 
                 }
 
-                li{
+                li {
                     background-position: center;
                     background-size: cover;
-              
+
                 }
 
                 #g7 {
-                    div{
+                    div {
                         background-image: url("../img/section-10/left.jpg");
                         height: 205px;
                     }
 
-                    @include md{
-                        grid-area: g7;  
+                    @include md {
+                        grid-area: g7;
                     }
 
                     @include lg {
@@ -127,22 +127,22 @@
                 }
 
                 #g8 {
-                    div{
+                    div {
                         background-image: url("../img/section-10/right.jpg");
                         height: 205px;
-                        
+
                     }
 
-                    @include md{
-                        grid-area: g8;  
+                    @include md {
+                        grid-area: g8;
                     }
 
                     @include lg {
                         width: 400px;
-                        
+
                     }
                 }
             }
-         }
-    }   
+        }
+    }
 }

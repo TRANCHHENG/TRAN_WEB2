@@ -138,7 +138,7 @@
 
                 #card2 {
                     grid-area: card2;
-                    
+
                     @include md {
                         display: grid;
                         grid-template-columns: 70% auto;
@@ -230,27 +230,34 @@
                     width: 450px;
                     font-size: rem-calc(30);
                 }
-                a:link, a:visited{
+
+                a:link,
+                a:visited {
                     color: $white;
                     transition: 0.25s;
                     text-decoration: none;
                 }
-    
-                a:hover, a:active{
+
+                a:hover,
+                a:active {
                     color: $brown;
                 }
             }
 
             h4 {
-                a:link, a:visited{
+
+                a:link,
+                a:visited {
                     color: $white;
                     transition: 0.25s;
                     text-decoration: none;
                 }
-    
-                a:hover, a:active{
+
+                a:hover,
+                a:active {
                     color: $blue;
                 }
+
                 @include md {
 
                     font-size: rem-calc(16);

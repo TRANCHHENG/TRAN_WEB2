@@ -407,6 +407,30 @@ textarea {
     #nav-container ul li a:active {
       color: #fff; }
 
+/* ===================
+    Video Player
+=================== */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 75%;
+  /* 4:6 */
+  padding-top: 25px;
+  height: 0; }
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.widescreen {
+  padding-bottom: 56.25%;
+  /* 16:9 */ }
+
+/* ===================
+    End Video Player
+=================== */
 /* =============
     Header
 ============= */
@@ -417,22 +441,28 @@ header {
   width: 100%;
   top: 0;
   left: 0; }
+  @media (min-width: 992px) {
+    header {
+      display: grid;
+      grid-template-columns: 5% auto 5%;
+      grid-template-areas: ". header ."; } }
   @media (min-width: 1200px) {
     header {
       grid-template-columns: auto 1200px auto; } }
   header > div {
+    grid-area: header;
     display: grid;
-    grid-template-columns: auto 87%;
+    grid-template-columns: auto 77%;
     grid-template-areas: "burger logo" "nav nav"; }
     @media (min-width: 768px) {
       header > div {
-        grid-template-columns: auto 85%;
+        grid-template-columns: auto 75%;
         grid-template-areas: "burger logo" "nav nav"; } }
     @media (min-width: 992px) {
       header > div {
         grid-template-rows: 30% auto;
-        grid-template-areas: ". top" "logo nav";
-        grid-template-columns: 40% auto; } }
+        grid-template-columns: 40% auto;
+        grid-template-areas: ". top" "logo nav"; } }
     @media (min-width: 992px) {
       header > div #top {
         padding: 60px 0;
@@ -535,39 +565,39 @@ footer {
         footer #footer-content #social ul li a:hover,
         footer #footer-content #social ul li a:active {
           color: #fff; }
-    footer #footer-content #social #links {
+    footer #footer-content #links {
       padding-top: 40px; }
-      footer #footer-content #social #links ul {
+      footer #footer-content #links ul {
         display: grid;
         gap: 30px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: " h1 h2 h3 " " h4 h5 h6 "; }
-        footer #footer-content #social #links ul li {
+        footer #footer-content #links ul li {
           text-align: center;
           font-size: 1rem; }
           @media (min-width: 992px) {
-            footer #footer-content #social #links ul li {
+            footer #footer-content #links ul li {
               font-size: 1.25rem; } }
-          footer #footer-content #social #links ul li a:link,
-          footer #footer-content #social #links ul li a:visited {
+          footer #footer-content #links ul li a:link,
+          footer #footer-content #links ul li a:visited {
             color: #C9A899;
             text-decoration: none;
             transition: 0.25s; }
-          footer #footer-content #social #links ul li a:hover,
-          footer #footer-content #social #links ul li a:active {
+          footer #footer-content #links ul li a:hover,
+          footer #footer-content #links ul li a:active {
             color: #fff; }
-          footer #footer-content #social #links ul li #h1 {
+          footer #footer-content #links ul li #h1 {
             grid-area: h1; }
-          footer #footer-content #social #links ul li #h2 {
+          footer #footer-content #links ul li #h2 {
             grid-area: h2; }
-          footer #footer-content #social #links ul li #h3 {
+          footer #footer-content #links ul li #h3 {
             grid-area: h3; }
-          footer #footer-content #social #links ul li #h4 {
+          footer #footer-content #links ul li #h4 {
             grid-area: h4; }
-          footer #footer-content #social #links ul li #h5 {
+          footer #footer-content #links ul li #h5 {
             grid-area: h5; }
-          footer #footer-content #social #links ul li #h6 {
+          footer #footer-content #links ul li #h6 {
             grid-area: h6; }
 
 /* =============
@@ -630,11 +660,13 @@ footer {
           font-size: 1.875rem;
           height: 85px;
           width: 408px; } }
-      #section-1 > div h1 a:link, #section-1 > div h1 a:visited {
+      #section-1 > div h1 a:link,
+      #section-1 > div h1 a:visited {
         color: #fff;
         transition: 0.25s;
         text-decoration: none; }
-      #section-1 > div h1 a:hover, #section-1 > div h1 a:active {
+      #section-1 > div h1 a:hover,
+      #section-1 > div h1 a:active {
         color: #C9A899; }
     #section-1 > div h2 {
       grid-area: h2;
@@ -732,7 +764,7 @@ footer {
       grid-area: h1;
       font-size: 1.25rem;
       transform: rotate(90deg);
-      margin-top: 35px; }
+      margin-top: 41px; }
       @media (min-width: 992px) {
         #section-3 > div #title h1 {
           font-size: 1.25rem;
@@ -1141,17 +1173,21 @@ footer {
           #section-6 > div #section-6-bottom h3 {
             width: 450px;
             font-size: 1.875rem; } }
-        #section-6 > div #section-6-bottom h3 a:link, #section-6 > div #section-6-bottom h3 a:visited {
+        #section-6 > div #section-6-bottom h3 a:link,
+        #section-6 > div #section-6-bottom h3 a:visited {
           color: #fff;
           transition: 0.25s;
           text-decoration: none; }
-        #section-6 > div #section-6-bottom h3 a:hover, #section-6 > div #section-6-bottom h3 a:active {
+        #section-6 > div #section-6-bottom h3 a:hover,
+        #section-6 > div #section-6-bottom h3 a:active {
           color: #C9A899; }
-      #section-6 > div #section-6-bottom h4 a:link, #section-6 > div #section-6-bottom h4 a:visited {
+      #section-6 > div #section-6-bottom h4 a:link,
+      #section-6 > div #section-6-bottom h4 a:visited {
         color: #fff;
         transition: 0.25s;
         text-decoration: none; }
-      #section-6 > div #section-6-bottom h4 a:hover, #section-6 > div #section-6-bottom h4 a:active {
+      #section-6 > div #section-6-bottom h4 a:hover,
+      #section-6 > div #section-6-bottom h4 a:active {
         color: #253A4C; }
       @media (min-width: 768px) {
         #section-6 > div #section-6-bottom h4 {
@@ -1302,11 +1338,13 @@ footer {
         @media (min-width: 768px) {
           #section-8 > div #button1 h1 {
             display: none; } }
-        #section-8 > div #button1 h1 a:link, #section-8 > div #button1 h1 a:visited {
+        #section-8 > div #button1 h1 a:link,
+        #section-8 > div #button1 h1 a:visited {
           color: #fff;
           transition: 0.25s;
           text-decoration: none; }
-        #section-8 > div #button1 h1 a:hover, #section-8 > div #button1 h1 a:active {
+        #section-8 > div #button1 h1 a:hover,
+        #section-8 > div #button1 h1 a:active {
           color: #C9A899; }
     #section-8 > div #button2 {
       display: grid;
@@ -1334,11 +1372,13 @@ footer {
             font-size: 1.875rem;
             height: 71px;
             width: 450px; } }
-        #section-8 > div #button2 h2 a:link, #section-8 > div #button2 h2 a:visited {
+        #section-8 > div #button2 h2 a:link,
+        #section-8 > div #button2 h2 a:visited {
           color: #fff;
           transition: 0.25s;
           text-decoration: none; }
-        #section-8 > div #button2 h2 a:hover, #section-8 > div #button2 h2 a:active {
+        #section-8 > div #button2 h2 a:hover,
+        #section-8 > div #button2 h2 a:active {
           color: #C9A899; }
     #section-8 > div h3 {
       grid-area: h3;
@@ -1347,11 +1387,13 @@ footer {
       @media (min-width: 768px) {
         #section-8 > div h3 {
           display: none; } }
-      #section-8 > div h3 a:link, #section-8 > div h3 a:visited {
+      #section-8 > div h3 a:link,
+      #section-8 > div h3 a:visited {
         color: #253A4C;
         transition: 0.25s;
         text-decoration: underline; }
-      #section-8 > div h3 a:hover, #section-8 > div h3 a:active {
+      #section-8 > div h3 a:hover,
+      #section-8 > div h3 a:active {
         color: #C9A899;
         text-decoration: none; }
     #section-8 > div h4 {
@@ -1362,11 +1404,13 @@ footer {
       @media (min-width: 992px) {
         #section-8 > div h4 {
           font-size: 1.5625rem; } }
-      #section-8 > div h4 a:link, #section-8 > div h4 a:visited {
+      #section-8 > div h4 a:link,
+      #section-8 > div h4 a:visited {
         color: #253A4C;
         transition: 0.25s;
         text-decoration: none; }
-      #section-8 > div h4 a:hover, #section-8 > div h4 a:active {
+      #section-8 > div h4 a:hover,
+      #section-8 > div h4 a:active {
         color: #C9A899; }
 
 /* =============
@@ -1399,7 +1443,7 @@ footer {
         padding: 20px;
         gap: 20px;
         grid-template-columns: auto 45% 45% auto;
-        grid-template-areas: " h1 h1 h2 h2 "    " . p p ."; } }
+        grid-template-areas: " h1 h1 h2 h2 " " . p p ."; } }
     @media (min-width: 992px) {
       #section-9 #section-9-content #visit {
         grid-template-columns: 50% auto;
@@ -1452,11 +1496,13 @@ footer {
             font-size: 1.875rem;
             height: 71px;
             width: 393px; } }
-        #section-9 #section-9-content #visit > div h2 a:link, #section-9 #section-9-content #visit > div h2 a:visited {
+        #section-9 #section-9-content #visit > div h2 a:link,
+        #section-9 #section-9-content #visit > div h2 a:visited {
           color: #fff;
           transition: 0.25s;
           text-decoration: none; }
-        #section-9 #section-9-content #visit > div h2 a:hover, #section-9 #section-9-content #visit > div h2 a:active {
+        #section-9 #section-9-content #visit > div h2 a:hover,
+        #section-9 #section-9-content #visit > div h2 a:active {
           color: #C9A899; }
     @media (min-width: 768px) {
       #section-9 #section-9-content #section-9-gallery ul {
@@ -1528,7 +1574,7 @@ footer {
         padding: 20px;
         gap: 20px;
         grid-template-columns: auto 45% 45% auto;
-        grid-template-areas: " . h1 h1 ."    " . p p ."; } }
+        grid-template-areas: " . h1 h1 ." " . p p ."; } }
     @media (min-width: 992px) {
       #section-10 #section-10-content #photography {
         grid-template-columns: auto 30% 60% auto;
@@ -1594,10 +1640,9 @@ footer {
 ============= */
 #section-11 {
   color: #253A4C;
-  padding: 40px 0;
+  padding-top: 40px;
   display: grid;
-  gap: 40px;
-  grid-template-columns: 10px auto 10px;
+  grid-template-columns: 15px auto 15px;
   grid-template-areas: ". section-11 ."; }
   @media (min-width: 768px) {
     #section-11 {
@@ -1605,67 +1650,67 @@ footer {
   @media (min-width: 992px) {
     #section-11 {
       grid-template-columns: 15% auto 15%;
-      padding: 80px 0; } }
+      padding-bottom: 80px; } }
   @media (min-width: 1200px) {
     #section-11 {
       grid-template-columns: auto 1200px auto; } }
   #section-11 #section-11-content {
     grid-area: section-11;
-    display: grid;
-    gap: 20px; }
+    display: grid; }
     @media (min-width: 768px) {
       #section-11 #section-11-content {
-        grid-template-rows: 40% auto;
+        gap: 20px;
+        grid-template-rows: 30% auto;
         grid-template-columns: 80% auto;
-        grid-template-areas: "article title-1" "video title-1"; } }
+        grid-template-areas: "article title1 " "video title1"; }
+        #section-11 #section-11-content h1 {
+          font-size: 1.875rem;
+          margin-top: 50px; } }
+    @media (min-width: 768px) and (min-width: 992px) {
+      #section-11 #section-11-content h1 {
+        font-size: 3.125rem; } }
     @media (min-width: 992px) {
       #section-11 #section-11-content {
-        grid-template-rows: 50% auto;
+        grid-template-rows: 30% auto;
         grid-template-columns: 50% auto;
-        grid-template-areas: " title title " "article video"; } }
-    #section-11 #section-11-content #title-1 {
-      grid-area: title; }
+        grid-template-areas: " title1 title1 " "article video"; } }
+    #section-11 #section-11-content #title1 {
+      grid-area: title1; }
       @media (min-width: 768px) {
-        #section-11 #section-11-content #title-1 {
+        #section-11 #section-11-content #title1 {
           transform: rotate(90deg);
           margin-left: -200px;
           margin-top: 50px;
           font-size: 1.25rem; } }
       @media (min-width: 992px) {
-        #section-11 #section-11-content #title-1 {
+        #section-11 #section-11-content #title1 {
           margin: 0;
           text-align: center;
           transform: none;
           font-size: 1.875rem; } }
-      #section-11 #section-11-content #title-1 #article {
+      #section-11 #section-11-content #title1 #article {
         grid-area: article; }
-        #section-11 #section-11-content #title-1 #article h2 {
+        #section-11 #section-11-content #title1 #article h2 {
           grid-area: h2;
-          text-align: right;
           font-size: 1.25rem; }
           @media (min-width: 992px) {
-            #section-11 #section-11-content #title-1 #article h2 {
+            #section-11 #section-11-content #title1 #article h2 {
               font-size: 1.875rem; } }
-        #section-11 #section-11-content #title-1 #article p {
+        #section-11 #section-11-content #title1 #article p {
           font-size: 1rem; }
           @media (min-width: 768px) {
-            #section-11 #section-11-content #title-1 #article p {
+            #section-11 #section-11-content #title1 #article p {
               font-size: 1.125rem; } }
           @media (min-width: 992px) {
-            #section-11 #section-11-content #title-1 #article p {
+            #section-11 #section-11-content #title1 #article p {
               font-size: 1.25rem; } }
-      #section-11 #section-11-content #title-1 #video {
-        grid-area: video; }
-        #section-11 #section-11-content #title-1 #video h3 {
-          background-color: #000;
-          color: #fff;
-          font-size: 1rem; }
-          #section-11 #section-11-content #title-1 #video h3 a:link, #section-11 #section-11-content #title-1 #video h3 a:visited {
-            color: #fff;
-            transition: 0.25s;
-            text-decoration: none; }
-          #section-11 #section-11-content #title-1 #video h3 a:hover, #section-11 #section-11-content #title-1 #video h3 a:active {
-            color: #C9A899; }
-          @media (min-width: 768px) {
-            #section-11 #section-11-content #title-1 #video h3 {
-              display: none; } }
+      #section-11 #section-11-content #title1 #video {
+        grid-area: video;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; }
+        #section-11 #section-11-content #title1 #video div {
+          width: 100%; }
+          #section-11 #section-11-content #title1 #video div video {
+            width: 100%; }

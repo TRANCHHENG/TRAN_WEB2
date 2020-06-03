@@ -2,21 +2,23 @@
     Section-1
 ============= */
 #section-1 {
-    
-    padding-top:40px;
 
-    @include md{
-        padding-top:60px;
+    padding-top: 40px;
+
+    @include md {
+        padding-top: 60px;
     }
-    @include lg{
-        padding-top:200px;
+
+    @include lg {
+        padding-top: 200px;
     }
+
     @include xl {
         grid-template-columns: auto 1200px auto;
     }
 
-    #section-1-gallery{
-       
+    #section-1-gallery {
+
         aside {
             background-size: cover;
             background-position: center;
@@ -24,93 +26,96 @@
             width: 100%;
             height: 265px;
 
-            @include md{
+            @include md {
                 height: 423px;
             }
 
-            @include lg{
-                padding:100px;
+            @include lg {
+                padding: 100px;
                 height: 724px;
 
             }
         }
     }
-            
+
     >div {
         background-color: $blue;
         display: grid;
         gap: 40px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-             ". h1 ."
+            ". h1 ."
             "h2 h2 h2";
 
-            @include md{
-                gap: 60px;
-            }
-            @include lg{
-                gap: 80px;
-            }
-        
-                h1 {
-                    grid-area: h1;
-                    background-color: $black;
-                    height: 48px;
-                    width: 140px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: rem-calc(16);
-                    color: $white;
-                    margin-top: -20px;
-    
-    
-                    @include md {
-                        font-size: rem-calc(30);
-                        height: 71px;
-                        width: 322px;
-                    
-                    }
-    
-                    @include lg {
-                        font-size: rem-calc(30);
-                        height: 85px;
-                        width: 408px;
-                    
-                    }
-                    a:link, a:visited{
-                        color: $white;
-                        transition: 0.25s;
-                        text-decoration: none;
-                    }
-        
-                    a:hover, a:active{
-                        color: $brown;
-                    }
-               
-                }
-                h2 {
-                    grid-area: h2;
-                    line-height: rem-calc(22);
-                    font-size: rem-calc(18);
-                    color: $brown;
-                    padding-bottom: 35px;
-                    text-align: center;
-    
-                    @include md {
-                        font-size: rem-calc(35);
-                        line-height: rem-calc(42);
-                        padding-bottom: 60px;
-                    }
-    
-                    @include lg {
-                        font-size: rem-calc(40);
-                        line-height: rem-calc(49);
-                        padding-bottom: 80px;
-                    }
-    
-                }
+        @include md {
+            gap: 60px;
+        }
+
+        @include lg {
+            gap: 80px;
+        }
+
+        h1 {
+            grid-area: h1;
+            background-color: $black;
+            height: 48px;
+            width: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: rem-calc(16);
+            color: $white;
+            margin-top: -20px;
+            
+            @include md {
+                font-size: rem-calc(30);
+                height: 71px;
+                width: 322px;
+
             }
 
+            @include lg {
+                font-size: rem-calc(30);
+                height: 85px;
+                width: 408px;
+
+            }
+
+            a:link,
+            a:visited {
+                color: $white;
+                transition: 0.25s;
+                text-decoration: none;
+            }
+
+            a:hover,
+            a:active {
+                color: $brown;
+            }
+
+        }
+
+        h2 {
+            grid-area: h2;
+            line-height: rem-calc(22);
+            font-size: rem-calc(18);
+            color: $brown;
+            padding-bottom: 35px;
+            text-align: center;
+
+            @include md {
+                font-size: rem-calc(35);
+                line-height: rem-calc(42);
+                padding-bottom: 60px;
+            }
+
+            @include lg {
+                font-size: rem-calc(40);
+                line-height: rem-calc(49);
+                padding-bottom: 80px;
+            }
+
+        }
     }
 
+}
