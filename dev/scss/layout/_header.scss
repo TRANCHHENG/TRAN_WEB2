@@ -4,25 +4,25 @@
 
 header {
     background-color: $blue;
+    padding: 40px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-
+    
     @include xl{
         grid-template-columns: auto 1200px auto;
     }
 
     >div {
-       
         display: grid;
-        grid-template-columns: auto 85%;
+        grid-template-columns: auto 87%;
         grid-template-areas:
             "burger logo"
             "nav nav";
 
         @include md {
-            grid-template-columns: auto 82%;
+            grid-template-columns: auto 85%;
             grid-template-areas:
                 "burger logo"
                 "nav nav";
@@ -71,13 +71,17 @@ header {
 
         #logo-container {
             grid-area: logo;
-            margin: 48px;
-
+            display: grid;
+            grid-template-columns: 10% auto 10%;
+            grid-template-areas: " . logo-container .";
+        
             h3 {
+                grid-area: logo-container;
                 font-size: rem-calc(20px);
                 color: $brown;
+                display: flex;
                 text-align: center;
-
+                align-items: center;
                 @include md {
                     font-size: 40px;
                 }
@@ -85,8 +89,8 @@ header {
         }
 
         #burger-container {
-            align-items: center;
             display: flex;
+            align-items: center;
             grid-area: burger;
             justify-content: flex-end;
             color: $brown;
@@ -103,10 +107,10 @@ header {
         #nav-container {
             background-color: $blue;
             color: $blue;
-            height: 150px;
+            height: 100px;
             display: none;
             grid-area: nav;
-            margin-top: 60px;
+            margin-top: 80px;
             font-size: rem-calc(18px);
 
             @include md {
@@ -128,7 +132,6 @@ header {
                 color: $brown;
                 transition: 0.25s;
                 text-decoration: none;
-                
             }
 
             a:hover, a:active{
