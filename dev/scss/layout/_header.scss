@@ -115,19 +115,21 @@ header {
         #nav-container {
             background-color: $blue;
             color: $blue;
-            height: 100px;
+            height: 80px;
             display: none;
             grid-area: nav;
-            margin-top: 80px;
-            font-size: rem-calc(18px);
+            margin: 60px 20px 0 0;
+            font-size: rem-calc(16px);
 
             @include md {
-                font-size: rem-calc(25px);
-                height: 300px;
+                margin: 60px 30px 0 0;
+                font-size: rem-calc(20px);
+                height: 130px;
             }
 
             @include lg {
                 height: 100px;
+                margin-top: 80px;
                 font-size: rem-calc(25px);
                 display: block;
             }

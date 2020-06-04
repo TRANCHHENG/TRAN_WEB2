@@ -517,18 +517,20 @@ header {
     header > div #nav-container {
       background-color: #253A4C;
       color: #253A4C;
-      height: 100px;
+      height: 80px;
       display: none;
       grid-area: nav;
-      margin-top: 80px;
-      font-size: 1.125rem; }
+      margin: 60px 20px 0 0;
+      font-size: 1rem; }
       @media (min-width: 768px) {
         header > div #nav-container {
-          font-size: 1.5625rem;
-          height: 300px; } }
+          margin: 60px 30px 0 0;
+          font-size: 1.25rem;
+          height: 130px; } }
       @media (min-width: 992px) {
         header > div #nav-container {
           height: 100px;
+          margin-top: 80px;
           font-size: 1.5625rem;
           display: block; } }
       header > div #nav-container h4 {
