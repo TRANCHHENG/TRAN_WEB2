@@ -363,6 +363,11 @@ h1, h2, h3, h4, h5 {
 .content-spacing {
   margin-top: 40px; }
 
+p {
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  line-height: 25px; }
+
 /* =============
     Buttons
 ============= */
@@ -435,6 +440,8 @@ textarea {
     Header
 ============= */
 header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #253A4C;
   padding: 40px 0;
   position: fixed;
@@ -546,6 +553,8 @@ header {
     Footer
 ============= */
 footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #253A4C;
   display: grid;
   grid-template-columns: 10% auto 10%;
@@ -606,6 +615,8 @@ footer {
     Section-1
 ============= */
 #section-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   padding-top: 40px; }
   @media (min-width: 768px) {
     #section-1 {
@@ -691,6 +702,9 @@ footer {
     Section-2
 ============= */
 #section-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  font-style: italic;
   padding: 40px 0;
   display: grid;
   grid-template-areas: ". section-2 .";
@@ -741,6 +755,8 @@ footer {
     Section-3
 ============= */
 #section-3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #4E6070;
   color: #fff;
   padding-top: 40px;
@@ -931,6 +947,9 @@ footer {
     Section-5
 ============= */
 #section-5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  font-style: italic;
   background-color: #D8D8D8;
   padding: 40px 0;
   display: grid;
@@ -1022,6 +1041,8 @@ footer {
     Section-6
 ============= */
 #section-6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #939798;
   text-align: center;
   color: #fff;
@@ -1199,6 +1220,8 @@ footer {
     Section-7
 ============= */
 #section-7 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #D8D8D8;
   color: #253A4C;
   padding: 40px 0px;
@@ -1302,6 +1325,8 @@ footer {
     Section-8
 ============= */
 #section-8 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #D8D8D8;
   color: #253A4C;
   display: grid;
@@ -1419,6 +1444,8 @@ footer {
     Section-9
 ============= */
 #section-9 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #4E6070;
   color: #fff;
   padding: 40px 0;
@@ -1551,6 +1578,8 @@ footer {
     Section-10
 ============= */
 #section-10 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   background-color: #4E6070;
   color: #fff;
   padding-bottom: 40px;
@@ -1641,6 +1670,8 @@ footer {
     Section-11
 ============= */
 #section-11 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   color: #253A4C;
   padding-top: 40px;
   display: grid;

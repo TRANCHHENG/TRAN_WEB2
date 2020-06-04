@@ -2,7 +2,9 @@
     Footer
 ============= */
 
-footer {
+footer { 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
     background-color: $blue;
     display: grid;
     grid-template-columns: 10% auto 10%;

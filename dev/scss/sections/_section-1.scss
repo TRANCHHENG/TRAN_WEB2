@@ -2,7 +2,8 @@
     Section-1
 ============= */
 #section-1 {
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
     padding-top: 40px;
 
     @include md {
@@ -66,6 +67,7 @@
             font-size: rem-calc(16);
             color: $white;
             margin-top: -20px;
+            
             
             @include md {
                 font-size: rem-calc(30);
