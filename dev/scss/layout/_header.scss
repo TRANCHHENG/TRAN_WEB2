@@ -11,6 +11,8 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    display:block;
+    z-index: 1001;
  
     @include lg{
         background-color: $blue;
