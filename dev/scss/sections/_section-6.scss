@@ -40,14 +40,14 @@
             margin-bottom: 40px;
 
             h1 {
-                font-size: rem-calc(20);
+                font-size: rem-calc(18);
 
                 @include md {
-                    font-size: rem-calc(30);
+                    font-size: rem-calc(20);
                 }
 
                 @include lg {
-                    font-size: rem-calc(50);
+                    font-size: rem-calc(30);
                 }
             }
         }
@@ -94,11 +94,11 @@
                         font-size: rem-calc(18);
 
                         @include md {
-                            font-size: rem-calc(25);
+                            font-size: rem-calc(20);
                         }
 
                         @include lg {
-                            font-size: rem-calc(30);
+                            font-size: rem-calc(25);
                         }
                     }
 
@@ -229,7 +229,7 @@
 
                 @include lg {
                     width: 450px;
-                    font-size: rem-calc(30);
+                    font-size: rem-calc(25);
                 }
 
                 a:link,
@@ -246,7 +246,6 @@
             }
 
             h4 {
-
                 a:link,
                 a:visited {
                     color: $white;
@@ -260,8 +259,7 @@
                 }
 
                 @include md {
-
-                    font-size: rem-calc(16);
+                    font-size: rem-calc(18);
                     grid-area: h4;
                 }
             }

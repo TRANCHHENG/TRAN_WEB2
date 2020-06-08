@@ -36,11 +36,11 @@
                 "video title1";
 
             h1 {
-                font-size: rem-calc(30);
+                font-size: rem-calc(25);
                 margin-top: 50px;
 
                 @include lg {
-                    font-size: rem-calc(50);
+                    font-size: rem-calc(40);
                 }
             }
         }
@@ -80,7 +80,7 @@
                     font-size: rem-calc(20);
 
                     @include lg {
-                        font-size: rem-calc(30);
+                        font-size: rem-calc(25);
                     }
                 }
 
@@ -89,10 +89,6 @@
 
                     @include md {
                         font-size: rem-calc(18);
-                    }
-
-                    @include lg {
-                        font-size: rem-calc(20);
                     }
                 }
             }

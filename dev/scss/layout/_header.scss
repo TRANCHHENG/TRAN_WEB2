@@ -6,15 +6,16 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700px;
     background-color: $blue;
-    padding: 40px 0;
+    padding-top: 30px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-
+ 
     @include lg{
+        background-color: $blue;
         display:grid;
-        grid-template-columns: 5% auto 5%;
+        grid-template-columns: 30% auto 30%;
         grid-template-areas: ". header ."
     }
     
@@ -48,7 +49,7 @@ header {
         
         #top {
             @include lg {
-                padding: 60px 0;
+                padding: 10px 0 100px;;
                 grid-area: top;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -60,7 +61,7 @@ header {
                     align-items: center;
                     color: $brown;
                     grid-area: h1;
-                    font-size: rem-calc(25px);
+                    font-size: rem-calc(18px);
 
                 }
 
@@ -74,7 +75,7 @@ header {
                     border-radius: 20px;
                     color: $blue;
                     grid-area: h2;
-                    font-size: rem-calc(25px);
+                    font-size: rem-calc(18px);
                 }
             }
         }
@@ -82,28 +83,29 @@ header {
         #logo-container {
             grid-area: logo;
             display: grid;
-            grid-template-columns: 10% auto 10%;
+            padding-bottom: 20px;
+            grid-template-columns: 15% auto 15%;
             grid-template-areas: " . logo-container .";
         
             h3 {
                 grid-area: logo-container;
-                font-size: rem-calc(20px);
+                font-size: rem-calc(18px);
                 color: $brown;
                 display: flex;
                 text-align: center;
                 align-items: center;
                 @include md {
-                    font-size: 40px;
+                    font-size: 30px;
                 }
             }
         }
 
         #burger-container {
             display: flex;
-            align-items: center;
             grid-area: burger;
-            justify-content: flex-end;
-            color: $brown;
+            justify-content: flex-start;
+            margin-left: 35%;
+            color: $white;
 
             @include lg {
                 display: none;
@@ -115,40 +117,40 @@ header {
         }
 
         #nav-container {
-            background-color: $blue;
-            color: $blue;
-            height: 80px;
-            display: none;
-            grid-area: nav;
-            margin: 60px 20px 0 0;
-            font-size: rem-calc(16px);
+                grid-area: nav;
+                display: none;
+                background-color: $blue;
+                height: 100%;
+                padding: 20px 0 0 20px;
+                font-size: rem-calc(16px);
 
-            @include md {
-                margin: 60px 30px 0 0;
-                font-size: rem-calc(20px);
-                height: 130px;
-            }
+                @include md {
+                    font-size: rem-calc(18px);
+                    
+                }
 
-            @include lg {
-                height: 100px;
-                margin-top: 80px;
-                font-size: rem-calc(25px);
-                display: block;
-            }
+                @include lg {
+                    padding: 0;
+                    display: block;
+                }
 
-            h4 {
-                color: $brown;
-            }
+                li{
+                    text-align: left;
+                }
 
-            a:link, a:visited{
-                color: $brown;
-                transition: 0.25s;
-                text-decoration: none;
-            }
+                h4 {
+                    color: $brown;
+                }
 
-            a:hover, a:active{
-                color: $white;
-            }
+                a:link, a:visited{
+                    color: $brown;
+                    transition: 0.25s;
+                    text-decoration: none;
+                }
+
+                a:hover, a:active{
+                    color: $white;
+                }
         }
     }
 }

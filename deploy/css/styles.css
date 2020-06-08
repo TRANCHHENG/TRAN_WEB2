@@ -360,9 +360,6 @@ h1, h2, h3, h4, h5 {
   @media (min-width: 992px) {
     .show-for-lg {
       display: block; } }
-.content-spacing {
-  margin-top: 40px; }
-
 p {
   font-family: 'Quicksand', sans-serif;
   font-style: normal;
@@ -443,15 +440,16 @@ header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700px;
   background-color: #253A4C;
-  padding: 40px 0;
+  padding-top: 30px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0; }
   @media (min-width: 992px) {
     header {
+      background-color: #253A4C;
       display: grid;
-      grid-template-columns: 5% auto 5%;
+      grid-template-columns: 30% auto 30%;
       grid-template-areas: ". header ."; } }
   @media (min-width: 1200px) {
     header {
@@ -472,7 +470,7 @@ header {
         grid-template-areas: ". top" "logo nav"; } }
     @media (min-width: 992px) {
       header > div #top {
-        padding: 60px 0;
+        padding: 10px 0 100px;
         grid-area: top;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -483,7 +481,7 @@ header {
           align-items: center;
           color: #C9A899;
           grid-area: h1;
-          font-size: 1.5625rem; }
+          font-size: 1.125rem; }
         header > div #top h2 {
           display: flex;
           justify-content: center;
@@ -494,52 +492,50 @@ header {
           border-radius: 20px;
           color: #253A4C;
           grid-area: h2;
-          font-size: 1.5625rem; } }
+          font-size: 1.125rem; } }
     header > div #logo-container {
       grid-area: logo;
       display: grid;
-      grid-template-columns: 10% auto 10%;
+      padding-bottom: 20px;
+      grid-template-columns: 15% auto 15%;
       grid-template-areas: " . logo-container ."; }
       header > div #logo-container h3 {
         grid-area: logo-container;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         color: #C9A899;
         display: flex;
         text-align: center;
         align-items: center; }
         @media (min-width: 768px) {
           header > div #logo-container h3 {
-            font-size: 40px; } }
+            font-size: 30px; } }
     header > div #burger-container {
       display: flex;
-      align-items: center;
       grid-area: burger;
-      justify-content: flex-end;
-      color: #C9A899; }
+      justify-content: flex-start;
+      margin-left: 35%;
+      color: #fff; }
       @media (min-width: 992px) {
         header > div #burger-container {
           display: none; } }
       header > div #burger-container i {
         cursor: pointer; }
     header > div #nav-container {
-      background-color: #253A4C;
-      color: #253A4C;
-      height: 80px;
-      display: none;
       grid-area: nav;
-      margin: 60px 20px 0 0;
+      display: none;
+      background-color: #253A4C;
+      height: 100%;
+      padding: 20px 0 0 20px;
       font-size: 1rem; }
       @media (min-width: 768px) {
         header > div #nav-container {
-          margin: 60px 30px 0 0;
-          font-size: 1.25rem;
-          height: 130px; } }
+          font-size: 1.125rem; } }
       @media (min-width: 992px) {
         header > div #nav-container {
-          height: 100px;
-          margin-top: 80px;
-          font-size: 1.5625rem;
+          padding: 0;
           display: block; } }
+      header > div #nav-container li {
+        text-align: left; }
       header > div #nav-container h4 {
         color: #C9A899; }
       header > div #nav-container a:link, header > div #nav-container a:visited {
@@ -627,6 +623,12 @@ footer {
   @media (min-width: 1200px) {
     #section-1 {
       grid-template-columns: auto 1200px auto; } }
+  @media (min-width: 992px) {
+    #section-1 #section-1-gallery {
+      background-color: #253A4C;
+      display: grid;
+      grid-template-columns: auto 90% auto;
+      grid-template-areas: ". aside ."; } }
   #section-1 #section-1-gallery aside {
     background-size: cover;
     background-position: center;
@@ -638,7 +640,7 @@ footer {
         height: 423px; } }
     @media (min-width: 992px) {
       #section-1 #section-1-gallery aside {
-        padding: 100px;
+        grid-area: aside;
         height: 724px; } }
   #section-1 > div {
     background-color: #253A4C;
@@ -665,12 +667,12 @@ footer {
       margin-top: -20px; }
       @media (min-width: 768px) {
         #section-1 > div h1 {
-          font-size: 1.875rem;
+          font-size: 1.25rem;
           height: 71px;
           width: 322px; } }
       @media (min-width: 992px) {
         #section-1 > div h1 {
-          font-size: 1.875rem;
+          font-size: 1.5625rem;
           height: 85px;
           width: 408px; } }
       #section-1 > div h1 a:link,
@@ -690,12 +692,12 @@ footer {
       text-align: center; }
       @media (min-width: 768px) {
         #section-1 > div h2 {
-          font-size: 2.1875rem;
+          font-size: 1.5625rem;
           line-height: 2.625rem;
           padding-bottom: 60px; } }
       @media (min-width: 992px) {
         #section-1 > div h2 {
-          font-size: 2.5rem;
+          font-size: 2.1875rem;
           line-height: 3.0625rem;
           padding-bottom: 80px; } }
 /* =============
@@ -713,7 +715,7 @@ footer {
     #section-2 {
       padding: 60px 0;
       grid-template-columns: auto 70% auto; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     #section-2 {
       padding: 80px 0;
       grid-template-columns: auto 60% auto; } }
@@ -737,20 +739,20 @@ footer {
       text-align: center; }
       @media (min-width: 768px) {
         #section-2 #section-2-content h3 {
-          font-size: 2.1875rem;
+          font-size: 1.875rem;
           padding: auto 106px; } }
       @media (min-width: 992px) {
         #section-2 #section-2-content h3 {
-          font-size: 3.125rem; } }
+          font-size: 2.1875rem; } }
     #section-2 #section-2-content p {
       text-align: justify;
       font-size: 1rem; }
       @media (min-width: 768px) {
         #section-2 #section-2-content p {
-          font-size: 1.25rem; } }
+          font-size: 1rem; } }
       @media (min-width: 992px) {
         #section-2 #section-2-content p {
-          font-size: 1.5625rem; } }
+          font-size: 1.125rem; } }
 /* =============
     Section-3
 ============= */
@@ -782,7 +784,7 @@ footer {
       grid-area: h1;
       font-size: 1.25rem;
       transform: rotate(90deg);
-      margin-top: 41px; }
+      margin-top: 38px; }
       @media (min-width: 992px) {
         #section-3 > div #title h1 {
           font-size: 1.25rem;
@@ -806,10 +808,10 @@ footer {
       font-size: 1.25rem; }
       @media (min-width: 768px) {
         #section-3 > div #info h2 {
-          font-size: 2.5rem; } }
+          font-size: 1.875rem; } }
       @media (min-width: 992px) {
         #section-3 > div #info h2 {
-          font-size: 3.125rem; } }
+          font-size: 2.1875rem; } }
     #section-3 > div #info p {
       grid-area: p;
       text-align: center;
@@ -817,16 +819,15 @@ footer {
       text-align: center; }
       @media (min-width: 768px) {
         #section-3 > div #info p {
-          font-size: 1.25rem; } }
+          font-size: 1.125rem; } }
       @media (min-width: 992px) {
         #section-3 > div #info p {
-          font-size: 1.5625rem; } }
+          font-size: 1.25rem; } }
     #section-3 > div #info div {
       grid-area: div;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: ". h3 .";
-      padding-top: 20px; }
+      grid-template-areas: ". h3 ."; }
       #section-3 > div #info div h3 {
         grid-area: h3;
         display: flex;
@@ -840,13 +841,13 @@ footer {
         color: #fff; }
         @media (min-width: 768px) {
           #section-3 > div #info div h3 {
-            font-size: 1.5625rem;
+            font-size: 1.25rem;
             width: 365px;
             height: 71px; } }
         @media (min-width: 992px) {
           #section-3 > div #info div h3 {
             margin: 25px 0;
-            font-size: 1.875rem;
+            font-size: 1.5625rem;
             width: 407px;
             height: 71px; } }
         #section-3 > div #info div h3 a:link,
@@ -972,12 +973,15 @@ footer {
     #section-5 #section-5-content #section-5-top {
       display: grid;
       gap: 20px;
-      grid-template-rows: 3, 1fr;
-      grid-template-columns: 60% 40%;
-      grid-template-areas: "h1 h1" "h2 h2" "p h3"; }
+      grid-template-rows: 4, 1fr;
+      grid-template-columns: 50% auto;
+      grid-template-areas: "h1 h1" "h2 h2" ". h3" "p p"; }
       @media (min-width: 768px) {
         #section-5 #section-5-content #section-5-top {
-          gap: 30px; } }
+          gap: 30px;
+          grid-template-rows: 3, 1fr;
+          grid-template-columns: 70% auto;
+          grid-template-areas: "h1 h1" "h2 h2" "p h3"; } }
     @media (min-width: 768px) {
       #section-5 #section-5-content #section-5-bottom {
         padding-top: 20px;
@@ -985,58 +989,57 @@ footer {
         gap: 30px;
         grid-template-rows: 2, 1fr;
         grid-template-columns: 30% 70%;
-        grid-template-areas: "h4 h4" ". p"; } }
+        grid-template-areas: "h4 h4" "p p"; } }
     #section-5 #section-5-content h1 {
       grid-area: h1;
       font-size: 20px;
       text-align: left; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h1 {
-          font-size: 45px; } }
+          font-size: 25px; } }
       @media (min-width: 992px) {
         #section-5 #section-5-content h1 {
-          font-size: 50px; } }
+          font-size: 40px; } }
     #section-5 #section-5-content h2 {
       grid-area: h2;
       font-size: 18px;
       margin-left: 80px; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h2 {
-          font-size: 25px;
+          font-size: 20px;
           margin-left: 150px; } }
       @media (min-width: 992px) {
         #section-5 #section-5-content h2 {
-          font-size: 40px; } }
+          font-size: 30px; } }
     #section-5 #section-5-content h3 {
       grid-area: h3;
       font-size: 18px; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h3 {
           transform: rotate(90deg);
-          font-size: 20px;
-          margin-left: 50px; } }
+          font-size: 18px;
+          padding-top: 100px; } }
       @media (min-width: 992px) {
         #section-5 #section-5-content h3 {
-          font-size: 30px;
-          margin-left: 80px; } }
+          font-size: 20px; } }
     #section-5 #section-5-content P {
       grid-area: p;
       font-size: 18px;
       text-align: justify; }
       @media (min-width: 992px) {
         #section-5 #section-5-content P {
-          font-size: 20px; } }
+          font-size: 18px; } }
     #section-5 #section-5-content h4 {
       grid-area: h4;
       font-size: 18px;
       text-align: right; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h4 {
-          font-size: 45px;
+          font-size: 25px;
           margin-left: 40%; } }
       @media (min-width: 992px) {
         #section-5 #section-5-content h4 {
-          font-size: 50px; } }
+          font-size: 40px; } }
 /* =============
     Section-6
 ============= */
@@ -1070,13 +1073,13 @@ footer {
     #section-6 > div #section-6-title {
       margin-bottom: 40px; }
       #section-6 > div #section-6-title h1 {
-        font-size: 1.25rem; }
+        font-size: 1.125rem; }
         @media (min-width: 768px) {
           #section-6 > div #section-6-title h1 {
-            font-size: 1.875rem; } }
+            font-size: 1.25rem; } }
         @media (min-width: 992px) {
           #section-6 > div #section-6-title h1 {
-            font-size: 3.125rem; } }
+            font-size: 1.875rem; } }
     #section-6 > div #section-6-card ul {
       display: grid;
       gap: 40px;
@@ -1101,10 +1104,10 @@ footer {
         font-size: 1.125rem; }
         @media (min-width: 768px) {
           #section-6 > div #section-6-card ul li h2 {
-            font-size: 1.5625rem; } }
+            font-size: 1.25rem; } }
         @media (min-width: 992px) {
           #section-6 > div #section-6-card ul li h2 {
-            font-size: 1.875rem; } }
+            font-size: 1.5625rem; } }
       #section-6 > div #section-6-card ul li p {
         font-size: 1rem;
         text-align: justify; }
@@ -1195,7 +1198,7 @@ footer {
         @media (min-width: 992px) {
           #section-6 > div #section-6-bottom h3 {
             width: 450px;
-            font-size: 1.875rem; } }
+            font-size: 1.5625rem; } }
         #section-6 > div #section-6-bottom h3 a:link,
         #section-6 > div #section-6-bottom h3 a:visited {
           color: #fff;
@@ -1214,7 +1217,7 @@ footer {
         color: #253A4C; }
       @media (min-width: 768px) {
         #section-6 > div #section-6-bottom h4 {
-          font-size: 1rem;
+          font-size: 1.125rem;
           grid-area: h4; } }
 /* =============
     Section-7
@@ -1237,7 +1240,7 @@ footer {
       gap: 60px; } }
   @media (min-width: 992px) {
     #section-7 {
-      grid-template-columns: 20% auto 20%;
+      grid-template-columns: 25% auto 25%;
       padding: 80px 0px;
       gap: 80px; } }
   @media (min-width: 1200px) {
@@ -1271,10 +1274,11 @@ footer {
         @media (min-width: 992px) {
           #section-7 #section-7-content #intro h1 {
             grid-area: h1;
-            font-size: 3.125rem;
+            font-size: 2.1875rem;
             text-align: left; } }
       @media (min-width: 992px) {
         #section-7 #section-7-content #intro p {
+          font-size: 1.125rem;
           grid-area: p; } }
     #section-7 #section-7-content div {
       background-image: url("../img/section-7/hero.jpg");
@@ -1298,7 +1302,7 @@ footer {
         text-align: left; } }
     @media (min-width: 992px) {
       #section-7 #section-7-content #benefits h2 {
-        font-size: 3.125rem;
+        font-size: 2.1875rem;
         text-align: left; } }
     #section-7 #section-7-content #benefits p {
       text-align: left; }
@@ -1311,16 +1315,16 @@ footer {
         text-align: right; } }
     @media (min-width: 992px) {
       #section-7 #section-7-content #duration h3 {
-        font-size: 3.125rem;
+        font-size: 2.1875rem;
         text-align: right; } }
     #section-7 #section-7-content #duration p {
       text-align: right; }
     #section-7 #section-7-content p {
-      font-size: 1.125rem;
+      font-size: 1rem;
       text-align: justify; }
       @media (min-width: 992px) {
         #section-7 #section-7-content p {
-          font-size: 1.25rem; } }
+          font-size: 1.125rem; } }
 /* =============
     Section-8
 ============= */
@@ -1433,6 +1437,7 @@ footer {
           font-size: 1.5625rem; } }
       #section-8 > div h4 a:link,
       #section-8 > div h4 a:visited {
+        font-size: 1.125rem;
         color: #253A4C;
         transition: 0.25s;
         text-decoration: none; }
@@ -1484,10 +1489,10 @@ footer {
       margin-top: 30px; }
       @media (min-width: 768px) {
         #section-9 #section-9-content #visit h1 {
-          font-size: 1.875rem; } }
+          font-size: 1.5625rem; } }
       @media (min-width: 992px) {
         #section-9 #section-9-content #visit h1 {
-          font-size: 2.5rem;
+          font-size: 1.875rem;
           transform: rotate(90deg);
           margin: 200px 50px 0 0; } }
     #section-9 #section-9-content #visit p {
@@ -1496,10 +1501,7 @@ footer {
       font-size: 1rem; }
       @media (min-width: 768px) {
         #section-9 #section-9-content #visit p {
-          font-size: 1.25rem; } }
-      @media (min-width: 992px) {
-        #section-9 #section-9-content #visit p {
-          font-size: 1.5625rem; } }
+          font-size: 1.125rem; } }
     #section-9 #section-9-content #visit > div {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1522,7 +1524,7 @@ footer {
             width: 268px; } }
         @media (min-width: 992px) {
           #section-9 #section-9-content #visit > div h2 {
-            font-size: 1.875rem;
+            font-size: 1.5625rem;
             height: 71px;
             width: 393px; } }
         #section-9 #section-9-content #visit > div h2 a:link,
@@ -1616,11 +1618,11 @@ footer {
       text-align: center; }
       @media (min-width: 768px) {
         #section-10 #section-10-content #photography h1 {
-          font-size: 1.875rem;
+          font-size: 1.5625rem;
           text-align: left; } }
       @media (min-width: 992px) {
         #section-10 #section-10-content #photography h1 {
-          font-size: 2.5rem;
+          font-size: 1.875rem;
           transform: rotate(-90deg);
           margin-left: 150px; } }
     #section-10 #section-10-content #photography p {
@@ -1629,10 +1631,7 @@ footer {
       font-size: 1rem; }
       @media (min-width: 768px) {
         #section-10 #section-10-content #photography p {
-          font-size: 1.25rem; } }
-      @media (min-width: 992px) {
-        #section-10 #section-10-content #photography p {
-          font-size: 1.5625rem; } }
+          font-size: 1.125rem; } }
     @media (min-width: 768px) {
       #section-10 #section-10-content #section-10-gallery ul {
         display: grid;
@@ -1697,11 +1696,11 @@ footer {
         grid-template-columns: 80% auto;
         grid-template-areas: "article title1 " "video title1"; }
         #section-11 #section-11-content h1 {
-          font-size: 1.875rem;
+          font-size: 1.5625rem;
           margin-top: 50px; } }
     @media (min-width: 768px) and (min-width: 992px) {
       #section-11 #section-11-content h1 {
-        font-size: 3.125rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 992px) {
       #section-11 #section-11-content {
         grid-template-rows: 30% auto;
@@ -1728,15 +1727,12 @@ footer {
           font-size: 1.25rem; }
           @media (min-width: 992px) {
             #section-11 #section-11-content #title1 #article h2 {
-              font-size: 1.875rem; } }
+              font-size: 1.5625rem; } }
         #section-11 #section-11-content #title1 #article p {
           font-size: 1rem; }
           @media (min-width: 768px) {
             #section-11 #section-11-content #title1 #article p {
               font-size: 1.125rem; } }
-          @media (min-width: 992px) {
-            #section-11 #section-11-content #title1 #article p {
-              font-size: 1.25rem; } }
       #section-11 #section-11-content #title1 #video {
         grid-area: video;
         display: flex;

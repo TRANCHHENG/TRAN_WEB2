@@ -56,13 +56,13 @@
 
 
                 @include md {
-                    font-size: rem-calc(30);
+                    font-size: rem-calc(25);
                     text-align: left;
 
                 }
 
                 @include lg {
-                    font-size: rem-calc(40);
+                    font-size: rem-calc(30);
                     transform: rotate(-90deg);
                     margin-left: 150px;
 
@@ -76,12 +76,7 @@
                 font-size: rem-calc(16);
 
                 @include md {
-                    font-size: rem-calc(20);
-
-                }
-
-                @include lg {
-                    font-size: rem-calc(25);
+                    font-size: rem-calc(18);
 
                 }
             }

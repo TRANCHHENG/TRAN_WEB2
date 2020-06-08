@@ -33,15 +33,23 @@
         #section-5-top {
             display: grid;
             gap: 20px;
-            grid-template-rows: (3, 1fr);
-            grid-template-columns: 60% 40%;
+            grid-template-rows: (4, 1fr);
+            grid-template-columns: 50% auto;
             grid-template-areas:
                 "h1 h1"
                 "h2 h2"
-                "p h3";
+                ". h3"
+                "p p";
 
             @include md {
                 gap: 30px;
+                grid-template-rows: (3, 1fr);
+                grid-template-columns: 70% auto;
+                grid-template-areas:
+                    "h1 h1"
+                    "h2 h2"
+                    "p h3";
+
             }
         }
 
@@ -54,7 +62,7 @@
                 grid-template-columns: 30% 70%;
                 grid-template-areas:
                     "h4 h4"
-                    ". p";
+                    "p p";
             }
 
         }
@@ -65,11 +73,11 @@
             text-align: left;
 
             @include md {
-                font-size: 45px;
+                font-size: 25px;
             }
 
             @include lg {
-                font-size: 50px;
+                font-size: 40px;
             }
         }
 
@@ -79,12 +87,12 @@
             margin-left: 80px;
 
             @include md {
-                font-size: 25px;
+                font-size: 20px;
                 margin-left: 150px;
             }
 
             @include lg {
-                font-size: 40px;
+                font-size: 30px;
 
             }
         }
@@ -95,13 +103,12 @@
 
             @include md {
                 transform: rotate(90deg);
-                font-size: 20px;
-                margin-left: 50px;
+                font-size: 18px;
+                padding-top: 100px;
             }
 
             @include lg {
-                font-size: 30px;
-                margin-left: 80px;
+                font-size: 20px;
             }
         }
 
@@ -111,7 +118,7 @@
             text-align: justify;
 
             @include lg {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
@@ -121,12 +128,12 @@
             text-align: right;
 
             @include md {
-                font-size: 45px;
+                font-size: 25px;
                 margin-left: 40%;
             }
 
             @include lg {
-                font-size: 50px;
+                font-size: 40px;
             }
         }
     }

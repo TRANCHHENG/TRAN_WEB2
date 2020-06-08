@@ -21,7 +21,7 @@
     }
 
     @include lg {
-        grid-template-columns: 20% auto 20%;
+        grid-template-columns: 25% auto 25%;
         padding: 80px 0px;
         gap: 80px;
     }
@@ -71,13 +71,14 @@
 
                 @include lg {
                     grid-area: h1;
-                    font-size: rem-calc(50);
+                    font-size: rem-calc(35);
                     text-align: left;
                 }
             }
 
             p {
                 @include lg {
+                    font-size: rem-calc(18);
                     grid-area: p;
                 }
 
@@ -88,41 +89,32 @@
             background-image: url("../img/section-7/hero.jpg");
             height: 139px;
 
-
-
-
             @include md {
                 background-image: url("../img/section-7/hero 2.jpg");
                 height: 263px;
                 width: 558px;
-
-
             }
 
             @include lg {
                 grid-area: div;
                 width: 616px;
                 height: 263px;
-
             }
         }
 
         #benefits {
-
             @include lg {
                 grid-area: benefits;
             }
 
             h2 {
-
-
                 @include md {
                     font-size: rem-calc(30);
                     text-align: left;
                 }
 
                 @include lg {
-                    font-size: rem-calc(50);
+                    font-size: rem-calc(35);
                     text-align: left;
                 }
             }
@@ -130,16 +122,12 @@
             p {
                 text-align: left;
             }
-
-
         }
 
         #duration {
-
             @include lg {
                 grid-area: duration;
             }
-
             h3 {
                 @include md {
                     font-size: rem-calc(30);
@@ -147,7 +135,7 @@
                 }
 
                 @include lg {
-                    font-size: rem-calc(50);
+                    font-size: rem-calc(35);
                     text-align: right;
                 }
             }
@@ -157,19 +145,14 @@
             }
         }
 
-
-
-
         p {
-            font-size: rem-calc(18);
+            font-size: rem-calc(16);
             text-align: justify;
 
             @include lg {
-                font-size: rem-calc(20);
+                font-size: rem-calc(18);
             }
 
         }
-
-
     }
 }

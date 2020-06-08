@@ -148,6 +148,7 @@
 
             a:link,
             a:visited {
+                font-size: rem-calc(18);
                 color: $blue;
                 transition: 0.25s;
                 text-decoration: none;

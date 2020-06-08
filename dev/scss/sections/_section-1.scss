@@ -19,7 +19,13 @@
     }
 
     #section-1-gallery {
-
+        @include lg{
+            background-color: $blue;
+            display: grid;
+            grid-template-columns: auto 90% auto;
+            grid-template-areas: ". aside .";
+        }
+            
         aside {
             background-size: cover;
             background-position: center;
@@ -32,9 +38,8 @@
             }
 
             @include lg {
-                padding: 100px;
+                grid-area: aside;
                 height: 724px;
-
             }
         }
     }
@@ -70,14 +75,14 @@
             
             
             @include md {
-                font-size: rem-calc(30);
+                font-size: rem-calc(20);
                 height: 71px;
                 width: 322px;
 
             }
 
             @include lg {
-                font-size: rem-calc(30);
+                font-size: rem-calc(25);
                 height: 85px;
                 width: 408px;
 
@@ -106,13 +111,13 @@
             text-align: center;
 
             @include md {
-                font-size: rem-calc(35);
+                font-size: rem-calc(25);
                 line-height: rem-calc(42);
                 padding-bottom: 60px;
             }
 
             @include lg {
-                font-size: rem-calc(40);
+                font-size: rem-calc(35);
                 line-height: rem-calc(49);
                 padding-bottom: 80px;
             }
