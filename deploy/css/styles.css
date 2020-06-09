@@ -437,15 +437,15 @@ textarea {
     Header
 ============= */
 header {
+  background-color: #253A4C;
+  display: block;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700px;
-  background-color: #253A4C;
+  left: 0;
   padding-top: 30px;
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
-  display: block;
+  width: 100%;
   z-index: 1001; }
   @media (min-width: 992px) {
     header {
@@ -457,8 +457,8 @@ header {
     header {
       grid-template-columns: auto 1200px auto; } }
   header > div {
-    grid-area: header;
     display: grid;
+    grid-area: header;
     grid-template-columns: auto 77%;
     grid-template-areas: "burger logo" "nav nav"; }
     @media (min-width: 768px) {
@@ -472,63 +472,63 @@ header {
         grid-template-areas: ". top" "logo nav"; } }
     @media (min-width: 992px) {
       header > div #top {
-        padding: 10px 0 100px;
-        grid-area: top;
         display: grid;
+        grid-area: top;
+        grid-template-areas: ". h1 h2";
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: ". h1 h2"; }
+        padding: 10px 0 100px; }
         header > div #top h1 {
-          display: flex;
-          justify-content: center;
           align-items: center;
           color: #C9A899;
-          grid-area: h1;
-          font-size: 1.125rem; }
-        header > div #top h2 {
           display: flex;
-          justify-content: center;
+          font-size: 1.125rem;
+          grid-area: h1;
+          justify-content: center; }
+        header > div #top h2 {
           align-items: center;
           background-color: #fff;
-          width: 198px;
-          height: 55px;
           border-radius: 20px;
           color: #253A4C;
+          display: flex;
+          font-size: 1.125rem;
           grid-area: h2;
-          font-size: 1.125rem; } }
+          height: 55px;
+          justify-content: center;
+          width: 198px; } }
     header > div #logo-container {
-      grid-area: logo;
       display: grid;
-      padding-bottom: 20px;
+      grid-area: logo;
+      grid-template-areas: " . logo-container .";
       grid-template-columns: 15% auto 15%;
-      grid-template-areas: " . logo-container ."; }
+      padding-bottom: 20px; }
       header > div #logo-container h3 {
-        grid-area: logo-container;
-        font-size: 1.125rem;
+        align-items: center;
         color: #C9A899;
         display: flex;
-        text-align: center;
-        align-items: center; }
+        font-size: 1.125rem;
+        grid-area: logo-container;
+        text-align: center; }
         @media (min-width: 768px) {
           header > div #logo-container h3 {
             font-size: 30px; } }
     header > div #burger-container {
+      color: #fff;
       display: flex;
       grid-area: burger;
       justify-content: flex-start;
-      margin-left: 35%;
-      color: #fff; }
+      margin-left: 35%; }
       @media (min-width: 992px) {
         header > div #burger-container {
           display: none; } }
       header > div #burger-container i {
         cursor: pointer; }
     header > div #nav-container {
-      grid-area: nav;
-      display: none;
       background-color: #253A4C;
+      display: none;
+      font-size: 1rem;
+      grid-area: nav;
       height: 100%;
-      padding: 20px 0 0 20px;
-      font-size: 1rem; }
+      padding: 20px 0 0 20px; }
       @media (min-width: 768px) {
         header > div #nav-container {
           font-size: 1.125rem; } }
@@ -553,15 +553,15 @@ header {
     Footer
 ============= */
 footer {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
   background-color: #253A4C;
   display: grid;
-  grid-template-columns: 10% auto 10%;
-  grid-template-areas: ". footer ."; }
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  grid-template-areas: ". footer .";
+  grid-template-columns: 10% auto 10%; }
   footer #footer-content {
-    grid-area: footer;
     color: #C9A899;
+    grid-area: footer;
     padding: 50px 0; }
     footer #footer-content #social ul {
       display: flex;
@@ -585,8 +585,8 @@ footer {
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: " h1 h2 h3 " " h4 h5 h6 "; }
         footer #footer-content #links ul li {
-          text-align: center;
-          font-size: 1rem; }
+          font-size: 1rem;
+          text-align: center; }
           @media (min-width: 992px) {
             footer #footer-content #links ul li {
               font-size: 1.25rem; } }
@@ -634,11 +634,11 @@ footer {
       grid-template-columns: auto 90% auto;
       grid-template-areas: ". aside ."; } }
   #section-1 #section-1-gallery aside {
-    background-size: cover;
-    background-position: center;
     background-image: url("../img/section-1/hero.jpg");
-    width: 100%;
-    height: 265px; }
+    background-position: center;
+    background-size: cover;
+    height: 265px;
+    width: 100%; }
     @media (min-width: 768px) {
       #section-1 #section-1-gallery aside {
         height: 423px; } }
@@ -659,16 +659,16 @@ footer {
       #section-1 > div {
         gap: 80px; } }
     #section-1 > div h1 {
-      grid-area: h1;
-      background-color: #000;
-      height: 48px;
-      width: 140px;
-      display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 1rem;
+      background-color: #000;
       color: #fff;
-      margin-top: -20px; }
+      display: flex;
+      font-size: 1rem;
+      grid-area: h1;
+      height: 48px;
+      justify-content: center;
+      margin-top: -20px;
+      width: 140px; }
       @media (min-width: 768px) {
         #section-1 > div h1 {
           font-size: 1.25rem;
@@ -688,10 +688,10 @@ footer {
       #section-1 > div h1 a:active {
         color: #C9A899; }
     #section-1 > div h2 {
+      color: #C9A899;
+      font-size: 1.125rem;
       grid-area: h2;
       line-height: 1.375rem;
-      font-size: 1.125rem;
-      color: #C9A899;
       padding-bottom: 35px;
       text-align: center; }
       @media (min-width: 768px) {
@@ -708,21 +708,21 @@ footer {
     Section-2
 ============= */
 #section-2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
-  font-style: italic;
-  padding: 40px 0;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 700px;
   grid-template-areas: ". section-2 .";
-  grid-template-columns: 15px auto 15px; }
+  grid-template-columns: 15px auto 15px;
+  padding: 40px 0; }
   @media (min-width: 768px) {
     #section-2 {
-      padding: 60px 0;
-      grid-template-columns: auto 70% auto; } }
+      grid-template-columns: auto 70% auto;
+      padding: 60px 0; } }
   @media (min-width: 992px) {
     #section-2 {
-      padding: 80px 0;
-      grid-template-columns: auto 60% auto; } }
+      grid-template-columns: auto 60% auto;
+      padding: 80px 0; } }
   #section-2 #section-2-content {
     grid-area: section-2; }
     @media (min-width: 768px) {
@@ -738,8 +738,8 @@ footer {
       #section-2 #section-2-content #section-2-bottom {
         margin-right: 230px; } }
     #section-2 #section-2-content h3 {
-      padding: 40px 0px;
       font-size: 1.25rem;
+      padding: 40px 0px;
       text-align: center; }
       @media (min-width: 768px) {
         #section-2 #section-2-content h3 {
@@ -749,8 +749,8 @@ footer {
         #section-2 #section-2-content h3 {
           font-size: 2.1875rem; } }
     #section-2 #section-2-content p {
-      text-align: justify;
-      font-size: 1rem; }
+      font-size: 1rem;
+      text-align: justify; }
       @media (min-width: 768px) {
         #section-2 #section-2-content p {
           font-size: 1rem; } }
@@ -761,21 +761,21 @@ footer {
     Section-3
 ============= */
 #section-3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
   background-color: #4E6070;
   color: #fff;
-  padding-top: 40px;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   gap: 40px;
+  grid-template-areas: ". section-3 .";
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section-3 ."; }
+  padding-top: 40px; }
   @media (min-width: 1200px) {
     #section-3 {
       grid-template-columns: auto 1200px auto; } }
   #section-3 > div {
-    grid-area: section-3;
-    display: grid; }
+    display: grid;
+    grid-area: section-3; }
     @media (min-width: 768px) {
       #section-3 > div {
         grid-template-columns: 60% auto;
@@ -785,8 +785,8 @@ footer {
         grid-template-columns: 75% auto;
         grid-template-areas: "h2 h1" "p div"; } }
     #section-3 > div #title h1 {
-      grid-area: h1;
-      font-size: 1.25rem; }
+      font-size: 1.25rem;
+      grid-area: h1; }
       @media (min-width: 768px) {
         #section-3 > div #title h1 {
           margin-top: 50px;
@@ -809,9 +809,9 @@ footer {
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas: "h2 h2" "p div"; } }
     #section-3 > div #info h2 {
+      font-size: 1.25rem;
       grid-area: h2;
-      text-align: center;
-      font-size: 1.25rem; }
+      text-align: center; }
       @media (min-width: 768px) {
         #section-3 > div #info h2 {
           font-size: 1.875rem; } }
@@ -819,9 +819,9 @@ footer {
         #section-3 > div #info h2 {
           font-size: 2.1875rem; } }
     #section-3 > div #info p {
+      font-size: 1rem;
       grid-area: p;
       text-align: center;
-      font-size: 1rem;
       text-align: center; }
       @media (min-width: 768px) {
         #section-3 > div #info p {
@@ -830,37 +830,37 @@ footer {
         #section-3 > div #info p {
           font-size: 1.25rem; } }
     #section-3 > div #info div {
-      grid-area: div;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: ". h3 ."; }
+      grid-area: div;
+      grid-template-areas: ". h3 .";
+      grid-template-columns: repeat(3, 1fr); }
       #section-3 > div #info div h3 {
-        grid-area: h3;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        text-align: center;
         background-color: #000;
-        height: 48px;
-        width: 152px;
+        color: #fff;
+        display: flex;
         font-size: 1rem;
-        color: #fff; }
+        grid-area: h3;
+        height: 48px;
+        justify-content: center;
+        text-align: center;
+        width: 152px; }
         @media (min-width: 768px) {
           #section-3 > div #info div h3 {
             font-size: 1.25rem;
-            width: 365px;
-            height: 71px; } }
+            height: 71px;
+            width: 365px; } }
         @media (min-width: 992px) {
           #section-3 > div #info div h3 {
-            margin: 25px 0;
             font-size: 1.5625rem;
-            width: 407px;
-            height: 71px; } }
+            height: 71px;
+            margin: 25px 0;
+            width: 407px; } }
         #section-3 > div #info div h3 a:link,
         #section-3 > div #info div h3 a:visited {
           color: #fff;
-          transition: 0.25s;
-          text-decoration: none; }
+          text-decoration: none;
+          transition: 0.25s; }
         #section-3 > div #info div h3 a:hover,
         #section-3 > div #info div h3 a:active {
           color: #C9A899; }
@@ -947,21 +947,21 @@ footer {
       @media (min-width: 992px) {
         #section-4 > div ul #g3 div {
           height: 329px;
-          width: 450px;
           margin-right: 0%;
-          margin-top: 325px; } }
+          margin-top: 325px;
+          width: 450px; } }
 /* =============
     Section-5
 ============= */
 #section-5 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
-  font-style: italic;
   background-color: #D8D8D8;
-  padding: 40px 0;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 700px;
   grid-template-areas: ". section-5 .";
-  grid-template-columns: 15px auto 15px; }
+  grid-template-columns: 15px auto 15px;
+  padding: 40px 0; }
   @media (min-width: 768px) {
     #section-5 {
       padding: 60px 0;
@@ -990,15 +990,15 @@ footer {
           grid-template-areas: "h1 h1" "h2 h2" "p h3"; } }
     @media (min-width: 768px) {
       #section-5 #section-5-content #section-5-bottom {
-        padding-top: 20px;
         display: grid;
         gap: 30px;
+        padding-top: 20px;
         grid-template-rows: 2, 1fr;
         grid-template-columns: 30% 70%;
         grid-template-areas: "h4 h4" "p p"; } }
     #section-5 #section-5-content h1 {
-      grid-area: h1;
       font-size: 20px;
+      grid-area: h1;
       text-align: left; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h1 {
@@ -1007,8 +1007,8 @@ footer {
         #section-5 #section-5-content h1 {
           font-size: 40px; } }
     #section-5 #section-5-content h2 {
-      grid-area: h2;
       font-size: 18px;
+      grid-area: h2;
       margin-left: 80px; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h2 {
@@ -1018,26 +1018,26 @@ footer {
         #section-5 #section-5-content h2 {
           font-size: 30px; } }
     #section-5 #section-5-content h3 {
-      grid-area: h3;
-      font-size: 18px; }
+      font-size: 18px;
+      grid-area: h3; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h3 {
-          transform: rotate(90deg);
           font-size: 18px;
-          padding-top: 100px; } }
+          padding-top: 100px;
+          transform: rotate(90deg); } }
       @media (min-width: 992px) {
         #section-5 #section-5-content h3 {
           font-size: 20px; } }
     #section-5 #section-5-content P {
-      grid-area: p;
       font-size: 18px;
+      grid-area: p;
       text-align: justify; }
       @media (min-width: 992px) {
         #section-5 #section-5-content P {
           font-size: 18px; } }
     #section-5 #section-5-content h4 {
-      grid-area: h4;
       font-size: 18px;
+      grid-area: h4;
       text-align: right; }
       @media (min-width: 768px) {
         #section-5 #section-5-content h4 {
@@ -1050,14 +1050,14 @@ footer {
     Section-6
 ============= */
 #section-6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
   background-color: #939798;
-  text-align: center;
   color: #fff;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  grid-template-areas: ". section-6 .";
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-6 ."; }
+  text-align: center; }
   @media (min-width: 768px) {
     #section-6 {
       background-color: #D8D8D8; } }
@@ -1073,9 +1073,9 @@ footer {
     @media (min-width: 768px) {
       #section-6 > div {
         background-color: #939798;
+        margin: 0 10%;
         padding: 60px 0;
-        width: 80%;
-        margin: 0 10%; } }
+        width: 80%; } }
     #section-6 > div #section-6-title {
       margin-bottom: 40px; }
       #section-6 > div #section-6-title h1 {
@@ -1130,14 +1130,14 @@ footer {
           height: 146px; }
           @media (min-width: 768px) {
             #section-6 > div #section-6-card ul #card1 > div {
-              width: 294px;
               height: 219px;
-              margin-left: -92px; } }
+              margin-left: -92px;
+              width: 294px; } }
           @media (min-width: 992px) {
             #section-6 > div #section-6-card ul #card1 > div {
-              width: 708px;
               height: 268px;
-              margin-left: -160px; } }
+              margin-left: -160px;
+              width: 708px; } }
       #section-6 > div #section-6-card ul #card2 {
         grid-area: card2; }
         @media (min-width: 768px) {
@@ -1153,8 +1153,8 @@ footer {
         #section-6 > div #section-6-card ul #card2 section {
           grid-area: section; }
         #section-6 > div #section-6-card ul #card2 div {
-          grid-area: div;
           background-image: url("../img/section-6/2.jpg");
+          grid-area: div;
           height: 146px; }
           @media (min-width: 768px) {
             #section-6 > div #section-6-card ul #card2 div {
@@ -1173,13 +1173,13 @@ footer {
           @media (min-width: 768px) {
             #section-6 > div #section-6-card ul #card3 div {
               height: 219px;
-              width: 294px;
-              margin-left: -92px; } }
+              margin-left: -92px;
+              width: 294px; } }
           @media (min-width: 992px) {
             #section-6 > div #section-6-card ul #card3 div {
-              width: 708px;
               height: 323px;
-              margin-left: -160px; } }
+              margin-left: -160px;
+              width: 708px; } }
     #section-6 > div #section-6-bottom {
       display: flex;
       justify-content: center;
@@ -1191,23 +1191,23 @@ footer {
           grid-template-areas: ". h3 ." "h4 h4 h4";
           gap: 60px; } }
       #section-6 > div #section-6-bottom h3 {
-        display: flex;
-        justify-content: center;
         align-items: center;
-        font-size: 1rem;
         background-color: #000;
+        display: flex;
+        font-size: 1rem;
         height: 32px;
+        justify-content: center;
         width: 140px; }
         @media (min-width: 768px) {
           #section-6 > div #section-6-bottom h3 {
-            grid-area: h3;
             font-size: 1.25rem;
+            grid-area: h3;
             height: 71px;
             width: 250px; } }
         @media (min-width: 992px) {
           #section-6 > div #section-6-bottom h3 {
-            width: 450px;
-            font-size: 1.5625rem; } }
+            font-size: 1.5625rem;
+            width: 450px; } }
         #section-6 > div #section-6-bottom h3 a:link,
         #section-6 > div #section-6-bottom h3 a:visited {
           color: #fff;
@@ -1232,33 +1232,33 @@ footer {
     Section-7
 ============= */
 #section-7 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
   background-color: #D8D8D8;
   color: #253A4C;
-  padding: 40px 0px;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   gap: 40px;
-  grid-template-columns: 15px auto 15px;
   grid-template-areas: ". section-7 .";
-  justify-content: center; }
+  grid-template-columns: 15px auto 15px;
+  justify-content: center;
+  padding: 40px 0px; }
   @media (min-width: 768px) {
     #section-7 {
+      gap: 60px;
       grid-template-columns: 15% auto 15%;
-      padding: 60px 0px;
-      gap: 60px; } }
+      padding: 60px 0px; } }
   @media (min-width: 992px) {
     #section-7 {
+      gap: 80px;
       grid-template-columns: 25% auto 25%;
-      padding: 80px 0px;
-      gap: 80px; } }
+      padding: 80px 0px; } }
   @media (min-width: 1200px) {
     #section-7 {
       grid-template-columns: auto 1200px auto; } }
   #section-7 #section-7-content {
-    grid-area: section-7;
     display: grid;
-    gap: 60px; }
+    gap: 60px;
+    grid-area: section-7; }
     @media (min-width: 992px) {
       #section-7 #section-7-content {
         grid-template-columns: auto 50%;
@@ -1300,8 +1300,8 @@ footer {
       @media (min-width: 992px) {
         #section-7 #section-7-content div {
           grid-area: div;
-          width: 616px;
-          height: 263px; } }
+          height: 263px;
+          width: 616px; } }
     @media (min-width: 992px) {
       #section-7 #section-7-content #benefits {
         grid-area: benefits; } }
@@ -1338,15 +1338,15 @@ footer {
     Section-8
 ============= */
 #section-8 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
   background-color: #D8D8D8;
   color: #253A4C;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
   gap: 40px;
-  padding-bottom: 40px;
+  grid-template-areas: ". section-8 .";
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-8 ."; }
+  padding-bottom: 40px; }
   @media (min-width: 768px) {
     #section-8 {
       grid-template-columns: 15% auto 15%;
@@ -1365,15 +1365,15 @@ footer {
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas: ". h1 ."; }
       #section-8 > div #button1 h1 {
-        grid-area: h1;
-        margin-bottom: 40px;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        font-size: 1rem;
         background-color: #000;
         color: #fff;
+        display: flex;
+        font-size: 1rem;
+        grid-area: h1;
         height: 32px;
+        justify-content: center;
+        margin-bottom: 40px;
         width: 182px; }
         @media (min-width: 768px) {
           #section-8 > div #button1 h1 {
@@ -1392,15 +1392,15 @@ footer {
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas: ". h2 ."; }
       #section-8 > div #button2 h2 {
-        grid-area: h2;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        font-size: 1rem;
         background-color: #000;
         color: #fff;
+        display: flex;
+        font-size: 1rem;
+        grid-area: h2;
         height: 32px;
+        justify-content: center;
+        margin-bottom: 20px;
         width: 182px; }
         @media (min-width: 768px) {
           #section-8 > div #button2 h2 {
@@ -1421,9 +1421,9 @@ footer {
         #section-8 > div #button2 h2 a:active {
           color: #C9A899; }
     #section-8 > div h3 {
+      font-size: 1rem;
       grid-area: h3;
-      text-align: center;
-      font-size: 1rem; }
+      text-align: center; }
       @media (min-width: 768px) {
         #section-8 > div h3 {
           display: none; } }
@@ -1446,10 +1446,10 @@ footer {
           font-size: 1.5625rem; } }
       #section-8 > div h4 a:link,
       #section-8 > div h4 a:visited {
-        font-size: 1.125rem;
         color: #253A4C;
-        transition: 0.25s;
-        text-decoration: none; }
+        font-size: 1.125rem;
+        text-decoration: none;
+        transition: 0.25s; }
       #section-8 > div h4 a:hover,
       #section-8 > div h4 a:active {
         color: #C9A899; }
@@ -1458,14 +1458,14 @@ footer {
     Section-9
 ============= */
 #section-9 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
   background-color: #4E6070;
   color: #fff;
-  padding: 40px 0;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  grid-template-areas: " . section-9 .";
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: " . section-9 ."; }
+  padding: 40px 0; }
   @media (min-width: 768px) {
     #section-9 {
       padding: 60px 0;
@@ -1483,8 +1483,8 @@ footer {
     @media (min-width: 768px) {
       #section-9 #section-9-content #visit {
         display: grid;
-        padding: 20px;
         gap: 20px;
+        padding: 20px;
         grid-template-columns: auto 45% 45% auto;
         grid-template-areas: " h1 h1 h2 h2 " " . p p ."; } }
     @media (min-width: 992px) {
@@ -1492,39 +1492,39 @@ footer {
         grid-template-columns: 50% auto;
         grid-template-areas: " h2 h1 " " p  h1"; } }
     #section-9 #section-9-content #visit h1 {
-      grid-area: h1;
       font-size: 1rem;
-      text-align: center;
-      margin-top: 30px; }
+      grid-area: h1;
+      margin-top: 30px;
+      text-align: center; }
       @media (min-width: 768px) {
         #section-9 #section-9-content #visit h1 {
           font-size: 1.5625rem; } }
       @media (min-width: 992px) {
         #section-9 #section-9-content #visit h1 {
           font-size: 1.875rem;
-          transform: rotate(90deg);
-          margin: 200px 50px 0 0; } }
+          margin: 200px 50px 0 0;
+          transform: rotate(90deg); } }
     #section-9 #section-9-content #visit p {
+      font-size: 1rem;
       grid-area: p;
-      text-align: justify;
-      font-size: 1rem; }
+      text-align: justify; }
       @media (min-width: 768px) {
         #section-9 #section-9-content #visit p {
           font-size: 1.125rem; } }
     #section-9 #section-9-content #visit > div {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       grid-template-areas: ". h2 .";
+      grid-template-columns: repeat(3, 1fr);
       padding-top: 20px; }
       #section-9 #section-9-content #visit > div h2 {
-        grid-area: h2;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        font-size: 1rem;
         background-color: #000;
         color: #fff;
+        display: flex;
+        font-size: 1rem;
+        grid-area: h2;
         height: 32px;
+        justify-content: center;
         width: 182px; }
         @media (min-width: 768px) {
           #section-9 #section-9-content #visit > div h2 {
@@ -1589,14 +1589,14 @@ footer {
     Section-10
 ============= */
 #section-10 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700px;
   background-color: #4E6070;
   color: #fff;
-  padding-bottom: 40px;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700px;
+  grid-template-areas: " . section-10 .";
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: " . section-10 ."; }
+  padding-bottom: 40px; }
   @media (min-width: 768px) {
     #section-10 {
       padding-bottom: 60px;
@@ -1613,8 +1613,8 @@ footer {
     @media (min-width: 768px) {
       #section-10 #section-10-content #photography {
         display: grid;
-        padding: 20px;
         gap: 20px;
+        padding: 20px;
         grid-template-columns: auto 45% 45% auto;
         grid-template-areas: " . h1 h1 ." " . p p ."; } }
     @media (min-width: 992px) {
@@ -1622,8 +1622,8 @@ footer {
         grid-template-columns: auto 30% 60% auto;
         grid-template-areas: " . . p ." " . h1 . ."; } }
     #section-10 #section-10-content #photography h1 {
-      grid-area: h1;
       font-size: 1rem;
+      grid-area: h1;
       text-align: center; }
       @media (min-width: 768px) {
         #section-10 #section-10-content #photography h1 {
@@ -1632,12 +1632,12 @@ footer {
       @media (min-width: 992px) {
         #section-10 #section-10-content #photography h1 {
           font-size: 1.875rem;
-          transform: rotate(-90deg);
-          margin-left: 150px; } }
+          margin-left: 150px;
+          transform: rotate(-90deg); } }
     #section-10 #section-10-content #photography p {
+      font-size: 1rem;
       grid-area: p;
-      text-align: justify;
-      font-size: 1rem; }
+      text-align: justify; }
       @media (min-width: 768px) {
         #section-10 #section-10-content #photography p {
           font-size: 1.125rem; } }
@@ -1650,8 +1650,8 @@ footer {
     @media (min-width: 992px) {
       #section-10 #section-10-content #section-10-gallery ul {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
         grid-template-areas: ". g7 g8 g8 ";
+        grid-template-columns: repeat(4, 1fr);
         margin-left: 150px; } }
     #section-10 #section-10-content #section-10-gallery ul li {
       background-position: center;
@@ -1678,13 +1678,13 @@ footer {
     Section-11
 ============= */
 #section-11 {
+  color: #253A4C;
+  display: grid;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700px;
-  color: #253A4C;
-  padding-top: 40px;
-  display: grid;
+  grid-template-areas: ". section-11 .";
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-11 ."; }
+  padding-top: 40px; }
   @media (min-width: 768px) {
     #section-11 {
       grid-template-columns: 10% auto 10%; } }
@@ -1696,8 +1696,8 @@ footer {
     #section-11 {
       grid-template-columns: auto 1200px auto; } }
   #section-11 #section-11-content {
-    grid-area: section-11;
-    display: grid; }
+    display: grid;
+    grid-area: section-11; }
     @media (min-width: 768px) {
       #section-11 #section-11-content {
         gap: 20px;
@@ -1719,21 +1719,21 @@ footer {
       grid-area: title1; }
       @media (min-width: 768px) {
         #section-11 #section-11-content #title1 {
-          transform: rotate(90deg);
+          font-size: 1.25rem;
           margin-left: -200px;
           margin-top: 50px;
-          font-size: 1.25rem; } }
+          transform: rotate(90deg); } }
       @media (min-width: 992px) {
         #section-11 #section-11-content #title1 {
+          font-size: 1.875rem;
           margin: 0;
           text-align: center;
-          transform: none;
-          font-size: 1.875rem; } }
+          transform: none; } }
       #section-11 #section-11-content #title1 #article {
         grid-area: article; }
         #section-11 #section-11-content #title1 #article h2 {
-          grid-area: h2;
-          font-size: 1.25rem; }
+          font-size: 1.25rem;
+          grid-area: h2; }
           @media (min-width: 992px) {
             #section-11 #section-11-content #title1 #article h2 {
               font-size: 1.5625rem; } }
@@ -1743,11 +1743,11 @@ footer {
             #section-11 #section-11-content #title1 #article p {
               font-size: 1.125rem; } }
       #section-11 #section-11-content #title1 #video {
-        grid-area: video;
-        display: flex;
-        justify-content: center;
         align-items: center;
-        height: 100vh; }
+        display: flex;
+        grid-area: video;
+        height: 100vh;
+        justify-content: center; }
         #section-11 #section-11-content #title1 #video div {
           width: 100%; }
           #section-11 #section-11-content #title1 #video div video {

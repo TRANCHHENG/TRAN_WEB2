@@ -3,23 +3,23 @@
 ============= */
 
 #section-3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700px;
     background-color: $lightblue;
     color: $white;
-    padding-top: 40px;
     display: grid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
     gap: 40px;
-    grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section-3 .";
+    grid-template-columns: 10px auto 10px;
+    padding-top: 40px;
 
     @include xl {
         grid-template-columns: auto 1200px auto;
     }
 
     >div {
-        grid-area: section-3;
         display: grid;
+        grid-area: section-3;
 
         @include md {
             grid-template-columns: 60% auto;
@@ -39,8 +39,8 @@
         #title {
 
             h1 {
-                grid-area: h1;
                 font-size: rem-calc(20);
+                grid-area: h1;
 
                 @include md {
                     margin-top: 50px;
@@ -80,9 +80,9 @@
             }
 
             h2 {
+                font-size: rem-calc(20);
                 grid-area: h2;
                 text-align: center;
-                font-size: rem-calc(20);
 
                 @include md {
                     font-size: rem-calc(30);
@@ -94,9 +94,9 @@
             }
 
             p {
+                font-size: rem-calc(16);
                 grid-area: p;
                 text-align: center;
-                font-size: rem-calc(16);
                 text-align: center;
 
                 @include md {
@@ -109,41 +109,40 @@
             }
 
             div {
-                grid-area: div;
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-area: div;
                 grid-template-areas: ". h3 .";
+                grid-template-columns: repeat(3, 1fr);
 
                 h3 {
-                    grid-area: h3;
-                    display: flex;
-                    justify-content: center;
                     align-items: center;
-                    text-align: center;
                     background-color: $black;
-                    height: 48px;
-                    width: 152px;
-                    font-size: rem-calc(16);
                     color: $white;
-
+                    display: flex;
+                    font-size: rem-calc(16);
+                    grid-area: h3;
+                    height: 48px;
+                    justify-content: center;
+                    text-align: center;
+                    width: 152px;
                     @include md {
                         font-size: rem-calc(20);
-                        width: 365px;
                         height: 71px;
+                        width: 365px;
                     }
 
                     @include lg {
-                        margin: 25px 0;
                         font-size: rem-calc(25);
-                        width: 407px;
                         height: 71px;
+                        margin: 25px 0;
+                        width: 407px;
                     }
 
                     a:link,
                     a:visited {
                         color: $white;
-                        transition: 0.25s;
                         text-decoration: none;
+                        transition: 0.25s;
                     }
 
                     a:hover,

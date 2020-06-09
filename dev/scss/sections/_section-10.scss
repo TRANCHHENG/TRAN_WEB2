@@ -3,14 +3,14 @@
 ============= */
 
 #section-10 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700px;
     background-color: $lightblue;
     color: $white;
-    padding-bottom: 40px;
     display: grid;
-    grid-template-columns: 10px auto 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
     grid-template-areas: " . section-10 .";
+    grid-template-columns: 10px auto 10px;
+    padding-bottom: 40px;
 
     @include md {
         padding-bottom: 60px;
@@ -30,11 +30,10 @@
         grid-area: section-10;
 
         #photography {
-
             @include md {
                 display: grid;
-                padding: 20px;
                 gap: 20px;
+                padding: 20px;
                 grid-template-columns: auto 45% 45% auto;
                 grid-template-areas:
                     " . h1 h1 ."
@@ -49,28 +48,26 @@
             }
 
             h1 {
-                grid-area: h1;
                 font-size: rem-calc(16);
+                grid-area: h1;
                 text-align: center;
-
 
                 @include md {
                     font-size: rem-calc(25);
                     text-align: left;
-
                 }
 
                 @include lg {
                     font-size: rem-calc(30);
-                    transform: rotate(-90deg);
                     margin-left: 150px;
+                    transform: rotate(-90deg);
                 }
             }
 
             p {
+                font-size: rem-calc(16);
                 grid-area: p;
                 text-align: justify;
-                font-size: rem-calc(16);
 
                 @include md {
                     font-size: rem-calc(18);
@@ -90,8 +87,8 @@
 
                 @include lg {
                     display: grid;
-                    grid-template-columns: repeat(4, 1fr);
                     grid-template-areas: ". g7 g8 g8 ";
+                    grid-template-columns: repeat(4, 1fr);
                     margin-left: 150px;
                 }
 
@@ -119,7 +116,6 @@
                     div {
                         background-image: url("../img/section-10/right.jpg");
                         height: 205px;
-
                     }
 
                     @include md {
@@ -128,7 +124,6 @@
 
                     @include lg {
                         width: 400px;
-
                     }
                 }
             }

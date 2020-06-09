@@ -27,12 +27,12 @@
         }
 
         aside {
-            background-size: cover;
-            background-position: center;
             background-image: url('../img/section-1/hero.jpg');
-            width: 100%;
+            background-position: center;
+            background-size: cover;
             height: 265px;
-
+            width: 100%;
+ 
             @include md {
                 height: 423px;
             }
@@ -62,16 +62,16 @@
         }
 
         h1 {
-            grid-area: h1;
-            background-color: $black;
-            height: 48px;
-            width: 140px;
-            display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: rem-calc(16);
+            background-color: $black;
             color: $white;
+            display: flex;
+            font-size: rem-calc(16);
+            grid-area: h1;
+            height: 48px;
+            justify-content: center;
             margin-top: -20px;
+            width: 140px;
 
             @include md {
                 font-size: rem-calc(20);
@@ -99,10 +99,10 @@
         }
 
         h2 {
+            color: $brown;
+            font-size: rem-calc(18);
             grid-area: h2;
             line-height: rem-calc(22);
-            font-size: rem-calc(18);
-            color: $brown;
             padding-bottom: 35px;
             text-align: center;
 

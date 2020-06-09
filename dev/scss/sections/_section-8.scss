@@ -3,15 +3,15 @@
 ============= */
 
 #section-8 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700px;
     background-color: $lightgrey;
     color: $blue;
     display: grid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
     gap: 40px;
-    padding-bottom: 40px;
-    grid-template-columns: 15px auto 15px;
     grid-template-areas: ". section-8 .";
+    grid-template-columns: 15px auto 15px;
+    padding-bottom: 40px;
 
     @include md {
         grid-template-columns: 15% auto 15%;
@@ -37,15 +37,15 @@
             grid-template-areas: ". h1 .";
 
             h1 {
-                grid-area: h1;
-                margin-bottom: 40px;
-                display: flex;
-                justify-content: center;
                 align-items: center;
-                font-size: rem-calc(16);
                 background-color: $black;
                 color: $white;
+                display: flex;
+                font-size: rem-calc(16);
+                grid-area: h1;
                 height: 32px;
+                justify-content: center;
+                margin-bottom: 40px;
                 width: 182px;
 
                 @include md {
@@ -74,15 +74,15 @@
                 ". h2 .";
 
             h2 {
-                grid-area: h2;
-                margin-bottom: 20px;
-                display: flex;
-                justify-content: center;
                 align-items: center;
-                font-size: rem-calc(16);
                 background-color: $black;
                 color: $white;
+                display: flex;
+                font-size: rem-calc(16);
+                grid-area: h2;
                 height: 32px;
+                justify-content: center;
+                margin-bottom: 20px;
                 width: 182px;
 
                 @include md {
@@ -112,9 +112,9 @@
         }
 
         h3 {
+            font-size: rem-calc(16);
             grid-area: h3;
             text-align: center;
-            font-size: rem-calc(16);
 
             @include md {
                 display: none;
@@ -147,10 +147,10 @@
 
             a:link,
             a:visited {
-                font-size: rem-calc(18);
                 color: $blue;
-                transition: 0.25s;
+                font-size: rem-calc(18);
                 text-decoration: none;
+                transition: 0.25s;
             }
 
             a:hover,

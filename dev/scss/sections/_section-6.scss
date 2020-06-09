@@ -3,14 +3,14 @@
 ============= */
 
 #section-6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700px;
     background-color: $grey;
-    text-align: center;
     color: $white;
     display: grid;
-    grid-template-columns: 15px auto 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
     grid-template-areas: ". section-6 .";
+    grid-template-columns: 15px auto 15px;
+    text-align: center;
 
     @include md {
         background-color: $lightgrey;
@@ -31,9 +31,9 @@
 
         @include md {
             background-color: $grey;
+            margin: 0 10%;
             padding: 60px 0;
             width: 80%;
-            margin: 0 10%;
         }
 
         #section-6-title {
@@ -64,7 +64,6 @@
                     "card3";
 
                 li {
-
                     @include md {
                         display: grid;
                         grid-template-columns: 30% auto;
@@ -125,15 +124,15 @@
                         height: 146px;
 
                         @include md {
-                            width: 294px;
                             height: 219px;
                             margin-left: -92px;
+                            width: 294px;
                         }
 
                         @include lg {
-                            width: 708px;
                             height: 268px;
                             margin-left: -160px;
+                            width: 708px;
                         }
                     }
                 }
@@ -159,8 +158,8 @@
 
 
                     div {
-                        grid-area: div;
                         background-image: url("../img/section-6/2.jpg");
+                        grid-area: div;
                         height: 146px;
 
                         @include md {
@@ -186,14 +185,14 @@
 
                         @include md {
                             height: 219px;
-                            width: 294px;
                             margin-left: -92px;
+                            width: 294px;
                         }
 
                         @include lg {
-                            width: 708px;
                             height: 323px;
                             margin-left: -160px;
+                            width: 708px;
                         }
                     }
                 }
@@ -215,24 +214,24 @@
             }
 
             h3 {
-                display: flex;
-                justify-content: center;
                 align-items: center;
-                font-size: rem-calc(16);
                 background-color: $black;
+                display: flex;
+                font-size: rem-calc(16);
                 height: 32px;
+                justify-content: center;
                 width: 140px;
 
                 @include md {
-                    grid-area: h3;
                     font-size: rem-calc(20);
+                    grid-area: h3;
                     height: 71px;
                     width: 250px;
                 }
 
                 @include lg {
-                    width: 450px;
                     font-size: rem-calc(25);
+                    width: 450px;
                 }
 
                 a:link,
@@ -249,7 +248,6 @@
             }
 
             h4 {
-
                 a:link,
                 a:visited {
                     color: $white;

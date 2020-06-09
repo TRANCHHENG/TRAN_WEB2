@@ -2,28 +2,28 @@
     Section-7
 ============= */
 #section-7 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700px;
     background-color: $lightgrey;
     color: $blue;
-    padding: 40px 0px;
     display: grid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700px;
     gap: 40px;
-    grid-template-columns: 15px auto 15px;
     grid-template-areas: ". section-7 .";
+    grid-template-columns: 15px auto 15px;
     justify-content: center;
+    padding: 40px 0px;
 
     @include md {
+        gap: 60px;
         grid-template-columns: 15% auto 15%;
         padding: 60px 0px;
-        gap: 60px;
 
     }
 
     @include lg {
+        gap: 80px;
         grid-template-columns: 25% auto 25%;
         padding: 80px 0px;
-        gap: 80px;
     }
 
     @include xl {
@@ -31,9 +31,9 @@
     }
 
     #section-7-content {
-        grid-area: section-7;
         display: grid;
         gap: 60px;
+        grid-area: section-7;
 
         @include lg {
             grid-template-columns: auto 50%;
@@ -45,10 +45,8 @@
         }
 
         #intro {
-
             background-size: cover;
             background-position: center;
-
 
             @include lg {
                 display: grid;
@@ -97,8 +95,8 @@
 
             @include lg {
                 grid-area: div;
-                width: 616px;
                 height: 263px;
+                width: 616px;
             }
         }
 
@@ -152,7 +150,6 @@
             @include lg {
                 font-size: rem-calc(18);
             }
-
         }
     }
 }

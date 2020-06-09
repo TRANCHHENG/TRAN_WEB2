@@ -2,13 +2,13 @@
     Section-11
 ============= */
 #section-11 {
+    color: $blue;
+    display: grid;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700px;
-    color: $blue;
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: 15px auto 15px;
     grid-template-areas: ". section-11 .";
+    grid-template-columns: 15px auto 15px;
+    padding-top: 40px;
 
     @include md {
         grid-template-columns: 10% auto 10%;
@@ -24,8 +24,8 @@
     }
 
     #section-11-content {
-        grid-area: section-11;
         display: grid;
+        grid-area: section-11;
 
         @include md {
             gap: 20px;
@@ -46,7 +46,6 @@
         }
 
         @include lg {
-
             grid-template-rows: 30% auto;
             grid-template-columns: 50% auto;
             grid-template-areas:
@@ -58,26 +57,25 @@
             grid-area: title1;
 
             @include md {
-                transform: rotate(90deg);
+                font-size: rem-calc(20);
                 margin-left: -200px;
                 margin-top: 50px;
-                font-size: rem-calc(20);
+                transform: rotate(90deg);
             }
 
             @include lg {
+                font-size: rem-calc(30);
                 margin: 0;
                 text-align: center;
                 transform: none;
-                font-size: rem-calc(30);
             }
 
             #article {
-
                 grid-area: article;
 
                 h2 {
-                    grid-area: h2;
                     font-size: rem-calc(20);
+                    grid-area: h2;
 
                     @include lg {
                         font-size: rem-calc(25);
@@ -94,11 +92,11 @@
             }
 
             #video {
-                grid-area: video;
-                display: flex;
-                justify-content: center;
                 align-items: center;
+                display: flex;
+                grid-area: video;
                 height: 100vh;
+                justify-content: center;
 
                 div {
                     width: 100%;

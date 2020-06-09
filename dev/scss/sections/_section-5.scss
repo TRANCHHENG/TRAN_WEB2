@@ -3,14 +3,14 @@
 ============= */
 
 #section-5 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700px;
-    font-style: italic;
     background-color: $lightgrey;
-    padding: 40px 0;
     display: grid;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 700px;
     grid-template-areas: ". section-5 .";
     grid-template-columns: 15px auto 15px;
+    padding: 40px 0;
 
     @include md {
         padding: 60px 0;
@@ -55,9 +55,9 @@
 
         #section-5-bottom {
             @include md {
-                padding-top: 20px;
                 display: grid;
                 gap: 30px;
+                padding-top: 20px;
                 grid-template-rows: (2, 1fr);
                 grid-template-columns: 30% 70%;
                 grid-template-areas:
@@ -68,8 +68,8 @@
         }
 
         h1 {
-            grid-area: h1;
             font-size: 20px;
+            grid-area: h1;
             text-align: left;
 
             @include md {
@@ -82,8 +82,8 @@
         }
 
         h2 {
-            grid-area: h2;
             font-size: 18px;
+            grid-area: h2;
             margin-left: 80px;
 
             @include md {
@@ -98,13 +98,13 @@
         }
 
         h3 {
-            grid-area: h3;
             font-size: 18px;
+            grid-area: h3;
 
             @include md {
-                transform: rotate(90deg);
                 font-size: 18px;
                 padding-top: 100px;
+                transform: rotate(90deg);
             }
 
             @include lg {
@@ -113,8 +113,8 @@
         }
 
         P {
-            grid-area: p;
             font-size: 18px;
+            grid-area: p;
             text-align: justify;
 
             @include lg {
@@ -123,8 +123,8 @@
         }
 
         h4 {
-            grid-area: h4;
             font-size: 18px;
+            grid-area: h4;
             text-align: right;
 
             @include md {
