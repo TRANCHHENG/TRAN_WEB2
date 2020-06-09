@@ -540,11 +540,13 @@ header {
         text-align: left; }
       header > div #nav-container h4 {
         color: #C9A899; }
-      header > div #nav-container a:link, header > div #nav-container a:visited {
+      header > div #nav-container a:link,
+      header > div #nav-container a:visited {
         color: #C9A899;
         transition: 0.25s;
         text-decoration: none; }
-      header > div #nav-container a:hover, header > div #nav-container a:active {
+      header > div #nav-container a:hover,
+      header > div #nav-container a:active {
         color: #fff; }
 
 /* =============
@@ -1129,6 +1131,7 @@ footer {
           @media (min-width: 768px) {
             #section-6 > div #section-6-card ul #card1 > div {
               width: 294px;
+              height: 219px;
               margin-left: -92px; } }
           @media (min-width: 992px) {
             #section-6 > div #section-6-card ul #card1 > div {
@@ -1155,6 +1158,7 @@ footer {
           height: 146px; }
           @media (min-width: 768px) {
             #section-6 > div #section-6-card ul #card2 div {
+              height: 219px;
               width: 294px; } }
           @media (min-width: 992px) {
             #section-6 > div #section-6-card ul #card2 div {
@@ -1168,6 +1172,7 @@ footer {
           height: 146px; }
           @media (min-width: 768px) {
             #section-6 > div #section-6-card ul #card3 div {
+              height: 219px;
               width: 294px;
               margin-left: -92px; } }
           @media (min-width: 992px) {

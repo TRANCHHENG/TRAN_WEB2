@@ -19,13 +19,13 @@
     }
 
     #section-1-gallery {
-        @include lg{
+        @include lg {
             background-color: $blue;
             display: grid;
             grid-template-columns: auto 90% auto;
             grid-template-areas: ". aside .";
         }
-            
+
         aside {
             background-size: cover;
             background-position: center;
@@ -72,20 +72,17 @@
             font-size: rem-calc(16);
             color: $white;
             margin-top: -20px;
-            
-            
+
             @include md {
                 font-size: rem-calc(20);
                 height: 71px;
                 width: 322px;
-
             }
 
             @include lg {
                 font-size: rem-calc(25);
                 height: 85px;
                 width: 408px;
-
             }
 
             a:link,
@@ -99,7 +96,6 @@
             a:active {
                 color: $brown;
             }
-
         }
 
         h2 {
@@ -121,8 +117,6 @@
                 line-height: rem-calc(49);
                 padding-bottom: 80px;
             }
-
         }
     }
-
 }

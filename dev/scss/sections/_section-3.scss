@@ -42,12 +42,12 @@
                 grid-area: h1;
                 font-size: rem-calc(20);
 
-                @include md{
+                @include md {
                     margin-top: 50px;
                     transform: rotate(90deg);
                 }
-              
-            
+
+
                 @include lg {
                     font-size: rem-calc(20);
                     margin-top: 55px;
@@ -113,7 +113,6 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-areas: ". h3 .";
-              
 
                 h3 {
                     grid-area: h3;

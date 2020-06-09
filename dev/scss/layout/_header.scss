@@ -11,17 +11,17 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    display:block;
+    display: block;
     z-index: 1001;
- 
-    @include lg{
+
+    @include lg {
         background-color: $blue;
-        display:grid;
+        display: grid;
         grid-template-columns: 30% auto 30%;
         grid-template-areas: ". header ."
     }
-    
-    @include xl{
+
+    @include xl {
         grid-template-columns: auto 1200px auto;
     }
 
@@ -46,12 +46,12 @@ header {
             grid-template-areas:
                 ". top"
                 "logo nav";
-            
         }
-        
+
         #top {
             @include lg {
-                padding: 10px 0 100px;;
+                padding: 10px 0 100px;
+                ;
                 grid-area: top;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -64,7 +64,6 @@ header {
                     color: $brown;
                     grid-area: h1;
                     font-size: rem-calc(18px);
-
                 }
 
                 h2 {
@@ -88,7 +87,7 @@ header {
             padding-bottom: 20px;
             grid-template-columns: 15% auto 15%;
             grid-template-areas: " . logo-container .";
-        
+
             h3 {
                 grid-area: logo-container;
                 font-size: rem-calc(18px);
@@ -96,6 +95,7 @@ header {
                 display: flex;
                 text-align: center;
                 align-items: center;
+
                 @include md {
                     font-size: 30px;
                 }
@@ -119,40 +119,42 @@ header {
         }
 
         #nav-container {
-                grid-area: nav;
-                display: none;
-                background-color: $blue;
-                height: 100%;
-                padding: 20px 0 0 20px;
-                font-size: rem-calc(16px);
+            grid-area: nav;
+            display: none;
+            background-color: $blue;
+            height: 100%;
+            padding: 20px 0 0 20px;
+            font-size: rem-calc(16px);
 
-                @include md {
-                    font-size: rem-calc(18px);
-                    
-                }
+            @include md {
+                font-size: rem-calc(18px);
 
-                @include lg {
-                    padding: 0;
-                    display: block;
-                }
+            }
 
-                li{
-                    text-align: left;
-                }
+            @include lg {
+                padding: 0;
+                display: block;
+            }
 
-                h4 {
-                    color: $brown;
-                }
+            li {
+                text-align: left;
+            }
 
-                a:link, a:visited{
-                    color: $brown;
-                    transition: 0.25s;
-                    text-decoration: none;
-                }
+            h4 {
+                color: $brown;
+            }
 
-                a:hover, a:active{
-                    color: $white;
-                }
+            a:link,
+            a:visited {
+                color: $brown;
+                transition: 0.25s;
+                text-decoration: none;
+            }
+
+            a:hover,
+            a:active {
+                color: $white;
+            }
         }
     }
 }
